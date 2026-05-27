@@ -9,12 +9,20 @@
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
   </head>
 
-  <body class="m-0 overflow-x-hidden">
+  <body class="m-0 w-full overflow-x-hidden">
     <nav
-      class="sticky top-0 w-full bg-blue-400 text-white text-base md:text-lg lg:text-xl py-4 flex items-center z-10"
+      class="sticky top-0 box-border w-full bg-blue-400 text-white text-base md:text-lg lg:text-xl z-10"
     >
+      <button
+        id="menu-button"
+        class="ml-auto block md:hidden text-3xl px-4 py-3"
+        aria-label="Open menu"
+      >
+        &#9776;
+      </button>
       <ul
-        class="w-full max-w-6xl mx-auto px-4 md:px-6 flex flex-wrap items-center justify-center gap-x-6 gap-y-3"
+        id="nav-menu"
+        class="hidden w-full max-w-6xl mx-auto px-4 pb-4 md:py-4 md:px-6 md:flex flex-col md:flex-row flex-wrap items-start md:items-center justify-center gap-x-6 gap-y-3"
       >
         <li>
           <a href="#about">Tailwind?</a>
