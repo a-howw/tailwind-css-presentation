@@ -11,18 +11,27 @@
 
   <body class="m-0 w-full overflow-x-hidden">
     <nav
-      class="sticky top-0 box-border w-full bg-blue-400 text-white text-base md:text-lg lg:text-xl z-10"
+      class="sticky top-0 box-border w-full bg-black text-white text-xl md:text-2xl lg:text-3xl z-10 flex items-center justify-between py-4"
     >
-      <button
-        id="menu-button"
-        class="ml-auto block md:hidden text-3xl px-4 py-3"
-        aria-label="Open menu"
-      >
-        &#9776;
-      </button>
+      <div class="flex w-full items-center justify-between">
+        <a href="https://tailwindcss.com/" target="_blank" rel="noopener">
+          <img
+            src="images/tailwind-logo.svg"
+            alt="logo"
+            class="w-24 h-12 my-0"
+          />
+        </a>
+        <button
+          id="menu-button"
+          class="block md:hidden text-3xl pr-2 py-3"
+          aria-label="Open menu"
+        >
+          &#9776;
+        </button>
+      </div>
       <ul
         id="nav-menu"
-        class="hidden w-full max-w-6xl mx-auto px-4 pb-4 md:py-4 md:px-6 md:flex flex-col md:flex-row flex-wrap items-start md:items-center justify-center gap-x-6 gap-y-3"
+        class="hidden absolute left-0 right-0 top-full bg-black pb-4 md:py-4 md:px-6 md:static md:w-full md:flex flex-col md:flex-row items-center justify-center gap-x-6 gap-y-3 text-center"
       >
         <li>
           <a href="#about">Tailwind?</a>
@@ -43,6 +52,7 @@
     </nav>
     <h1
       class="w-screen px-4 md:px-6 min-h-[20vh] flex items-center justify-center text-5xl md:text-7xl lg:text-9xl font-bold !mt-0 text-center bg-black text-white"
+      id="top-page"
     >
       Tailwind CSS
     </h1>
@@ -68,8 +78,8 @@
           id="about"
           class="w-full min-h-[70vh] md:min-h-[80vh] p-4 md:p-6 scroll-mt-56 md:scroll-mt-28"
         >
-          <h2 class="font-bold">What is Tailwind</h2>
-          <p>
+          <h2 class="font-bold text-5xl m-5">What is Tailwind</h2>
+          <p class="m-4 leading-normal">
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut, cumque
             obcaecati libero perferendis rem ab, eos, tempore molestias
             aspernatur odio error et dolore animi commodi repellat hic dolor
@@ -80,9 +90,9 @@
           id="history"
           class="w-full min-h-[70vh] md:min-h-[80vh] p-4 md:p-6 scroll-mt-56 md:scroll-mt-28"
         >
-          <h2 class="font-bold">History</h2>
+          <h2 class="font-bold text-5xl m-5">History</h2>
           <img src="images/tired-developer.jpg" alt="" />
-          <p>
+          <p class="m-4 leading-normal">
             Lorem ipsum dolor, sit amet consectetur adipisicing elit. Error
             delectus debitis impedit quaerat unde similique nesciunt quae
             repellendus dolores. Ipsa, praesentium quasi. Ad in dolorum labore
@@ -93,9 +103,9 @@
           id="why-use"
           class="w-full min-h-[70vh] md:min-h-[80vh] p-4 md:p-6 scroll-mt-56 md:scroll-mt-28"
         >
-          <h2 class="font-bold">Why use it?</h2>
+          <h2 class="font-bold text-5xl m-5">Why use it?</h2>
           <img src="images/so-what.png" alt="why use it" />
-          <p>
+          <p class="m-4 leading-normal">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae,
             porro. Voluptas aperiam et consectetur minima provident velit,
             alias, officia fuga officiis nobis adipisci in quibusdam nemo
@@ -106,9 +116,9 @@
           id="pros-cons"
           class="w-full min-h-[70vh] md:min-h-[80vh] p-4 md:p-6 scroll-mt-56 md:scroll-mt-28"
         >
-          <h2 class="font-bold">Pros and Cons</h2>
+          <h2 class="font-bold text-5xl m-5">Pros and Cons</h2>
           <img src="images/pros-cons.png" alt="thumbs up and thumps down" />
-          <p>
+          <p class="m-4 leading-normal">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae,
             porro. Voluptas aperiam et consectetur minima provident velit,
             alias, officia fuga officiis nobis adipisci in quibusdam nemo
@@ -119,9 +129,9 @@
           id="how"
           class="w-full min-h-[70vh] md:min-h-[80vh] p-4 md:p-6 scroll-mt-56 md:scroll-mt-28"
         >
-          <h2 class="font-bold">How to use it?</h2>
+          <h2 class="font-bold text-5xl m-5">How to use it?</h2>
           <img src="images/user-manual .jpg" alt="user manual" />
-          <p>
+          <p class="m-4 leading-normal">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae,
             porro. Voluptas aperiam et consectetur minima provident velit,
             alias, officia fuga officiis nobis adipisci in quibusdam nemo
@@ -132,9 +142,9 @@
           id="versus"
           class="w-full min-h-[70vh] md:min-h-[80vh] p-4 md:p-6 scroll-mt-56 md:scroll-mt-28"
         >
-          <h2 class="font-bold">Regular CSS vs Tailwind CSS?</h2>
+          <h2 class="font-bold text-5xl m-5">Regular CSS vs Tailwind CSS?</h2>
           <img src="images/arm-wrestle.jpg" alt="arm wrestling" />
-          <p>
+          <p class="m-4 leading-normal">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae,
             porro. Voluptas aperiam et consectetur minima provident velit,
             alias, officia fuga officiis nobis adipisci in quibusdam nemo
@@ -145,14 +155,14 @@
           id="install"
           class="w-full min-h-[70vh] md:min-h-[80vh] p-4 md:p-6 scroll-mt-56 md:scroll-mt-28"
         >
-          <h2 class="font-bold">Install?</h2>
+          <h2 class="font-bold text-5xl m-5">Install?</h2>
           <div class="flex">
             <img
               src="images/wifi-install.png"
               alt="installing wifi"
               class="w-[50%]"
             />
-            <p>
+            <p class="m-4 leading-normal">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae,
               porro. Voluptas aperiam et consectetur minima provident velit,
               alias, officia fuga officiis nobis adipisci in quibusdam nemo
@@ -164,9 +174,9 @@
           id="industry"
           class="w-full min-h-[70vh] md:min-h-[80vh] p-4 md:p-6 scroll-mt-56 md:scroll-mt-28"
         >
-          <h2 class="font-bold">Real World Usage</h2>
+          <h2 class="font-bold text-5xl m-5">Real World Usage</h2>
           <img src="images/future-world.jpg" alt="global use" />
-          <p>
+          <p class="m-4 leading-normal">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae,
             porro. Voluptas aperiam et consectetur minima provident velit,
             alias, officia fuga officiis nobis adipisci in quibusdam nemo
@@ -177,9 +187,9 @@
           id="future-trends"
           class="w-full min-h-[70vh] md:min-h-[80vh] p-4 md:p-6 scroll-mt-56 md:scroll-mt-28"
         >
-          <h2 class="font-bold">AI & Trends</h2>
+          <h2 class="font-bold text-5xl m-5">AI & Trends</h2>
           <img src="images/ai-future.jpg" alt="ai future and trends" />
-          <p>
+          <p class="m-4 leading-normal">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae,
             porro. Voluptas aperiam et consectetur minima provident velit,
             alias, officia fuga officiis nobis adipisci in quibusdam nemo
@@ -189,7 +199,7 @@
       </main>
     </div>
     <footer
-      class="w-full py-6 text-sm bg-blue-400"
+      class="w-full min-h-[10vh] flex items-center text-xl md:text-2xl lg:text-3xl bg-black text-white"
     >
       <div class="w-full max-w-6xl mx-auto px-4 md:px-6 flex flex-col md:flex-row justify-center items-center gap-3 md:gap-20">
         <p class="whitespace-nowrap">© 2026 Tailwind CSS Presentation Project</p>
