@@ -1,0 +1,12 @@
+html,
+body {
+  margin: 0;
+  width: 100%;
+}
+
+nav {
+  position: sticky;
+  top: 0;
+  width: 100vw;
+  box-sizing: border-box;
+}
