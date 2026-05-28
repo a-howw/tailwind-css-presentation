@@ -1,48 +1,70 @@
 <!doctype html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tailwind CSS Presentation</title>
+    <link rel="stylesheet" href="styles/styles.css" />
+    <script src="scripts/scripts.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Document</title>
-  <link rel="stylesheet" href="styles/styles.css" />
-  <script src="scripts/scripts.js" defer></script>
-  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-</head>
+  <body class="m-0 w-full overflow-x-hidden">
+    <nav
+      class="sticky top-0 box-border w-full bg-black text-white text-xl md:text-2xl lg:text-3xl z-10 flex items-center justify-between py-4"
+    >
+      <div class="flex w-full items-center justify-between">
+        <a href="https://tailwindcss.com/" target="_blank" rel="noopener">
+          <picture>
+            <source
+              media="(min-width: 48em)"
+              srcset="images/framework-logo/tailwind-logo.svg"
+            />
 
-<body class="m-0 w-full overflow-x-hidden">
-  <nav
-    class="sticky top-0 box-border w-full bg-black text-white text-xl md:text-2xl lg:text-3xl z-10 flex items-center justify-between py-4">
-    <div class="flex w-full items-center justify-between">
-      <a href="https://tailwindcss.com/" target="_blank" rel="noopener">
-        <img src="images/framework-logo/tailwind-logo.svg" alt="logo" class="w-24 h-12 my-0" />
-      </a>
-      <button id="menu-button" class="block md:hidden text-3xl pr-2 py-3" aria-label="Open menu">
-        &#9776;
-      </button>
-    </div>
-    <ul id="nav-menu"
-      class="hidden absolute left-0 right-0 top-full bg-black pb-4 md:py-4 md:px-6 md:static md:w-full md:flex flex-col md:flex-row items-center justify-center gap-x-6 gap-y-3 text-center">
-      <li><a href="#about">Tailwind?</a></li>
-      <li><a href="#history">History</a></li>
-      <li><a href="#why-use">Why?</a></li>
-      <li><a href="#pros-cons">Pros/Cons</a></li>
-      <li><a href="#how">How to Use</a></li>
-      <li><a href="#versus">VS Normal CSS</a></li>
-      <li><a href="#install">Install</a></li>
-      <li><a href="#industry">Real World</a></li>
-      <li><a href="#future-trends">Trends</a></li>
-      <li><a href="#learn-more">Learn More</a></li>
-    </ul>
-  </nav>
-  <h1
-    class="w-screen px-4 md:px-6 min-h-[20vh] flex items-center justify-center text-5xl md:text-7xl lg:text-9xl font-bold !mt-0 text-center bg-black text-white"
-    id="top-page">
-    Tailwind CSS
-  </h1>
-  <div id="wrapper" class="max-w-6xl mx-auto px-4 md:px-6 bg-white">
-    <main class="min-h-[70vh] p-3 md:p-5 text-xl md:text-2xl lg:text-3xl space-y-6">
-      <img sizes="(max-width: 1280px) 100vw, 1280px" srcset="
+            <img
+              src="images/framework-logo/tailwind-logo.svg"
+              alt="Tailwind CSS logo"
+              class="w-24 h-12 my-0"
+            />
+          </picture>
+        </a>
+        <button
+          id="menu-button"
+          class="block md:hidden text-3xl pr-2 py-3"
+          aria-label="Open menu"
+        >
+          &#9776;
+        </button>
+      </div>
+      <ul
+        id="nav-menu"
+        class="hidden absolute left-0 right-0 top-full bg-black pb-4 md:py-4 md:px-6 md:static md:w-full md:flex flex-col md:flex-row items-center justify-center gap-x-6 gap-y-3 text-center"
+      >
+        <li><a href="#about">Tailwind?</a></li>
+        <li><a href="#history">History</a></li>
+        <li><a href="#why-use">Why?</a></li>
+        <li><a href="#pros-cons">Pros/Cons</a></li>
+        <li><a href="#how">How to Use</a></li>
+        <li><a href="#versus">VS Normal CSS</a></li>
+        <li><a href="#install">Install</a></li>
+        <li><a href="#industry">Real World</a></li>
+        <li><a href="#future-trends">Trends</a></li>
+        <li><a href="#learn-more">Learn More</a></li>
+      </ul>
+    </nav>
+    <h1
+      class="w-screen px-4 md:px-6 min-h-[20vh] flex items-center justify-center text-5xl md:text-7xl lg:text-9xl font-bold !mt-0 text-center bg-black text-white"
+      id="top-page"
+    >
+      Tailwind CSS
+    </h1>
+    <div id="wrapper" class="max-w-6xl mx-auto px-4 md:px-6 bg-white">
+      <main
+        class="min-h-[70vh] p-3 md:p-5 text-xl md:text-2xl lg:text-3xl space-y-6"
+      >
+        <img
+          sizes="(max-width: 1280px) 100vw, 1280px"
+          srcset="
             images/webdesign-hero.jpg  200w,
             images/webdesign-hero.jpg  510w,
             images/webdesign-hero.jpg  731w,
@@ -50,855 +72,1078 @@
             images/webdesign-hero.jpg 1109w,
             images/webdesign-hero.jpg 1278w,
             images/webdesign-hero.jpg 1280w
-          " src="images/webdesign-hero.jpg" alt="" />
-      <section id="about" class="w-full min-h-[70vh] md:min-h-[80vh] p-4 md:p-6 scroll-mt-56 md:scroll-mt-28">
-        <h2 class="font-bold text-5xl m-5">What is Tailwind CSS?</h2>
-        <p class="m-4 leading-normal">
-          Tailwind CSS is a utility-first CSS framework used to build modern
-          and responsive user interfaces. Unlike traditional CSS frameworks
-          that provide pre-designed components, Tailwind focuses on small
-          reusable utility classes that developers combine directly in HTML.
-        </p>
-        <p class="m-4 leading-normal">
-          Instead of creating large custom CSS files and naming classes for
-          every element, developers use utility classes such as
-          <code class="rounded bg-slate-200 px-1">flex</code>,
-          <code class="rounded bg-slate-200 px-1">p-4</code>,
-          <code class="rounded bg-slate-200 px-1">bg-blue-600</code>
-          and <code class="rounded bg-slate-200 px-1">text-center</code> to
-          control layout, spacing, colors, typography, and responsiveness.
-        </p>
-        <p class="m-4 leading-normal">
-          Each utility class usually represents a single styling rule. By
-          combining multiple utility classes together, developers can quickly
-          create custom interfaces without constantly switching between HTML
-          and CSS files.
-        </p>
-        <p class="m-4 leading-normal">
-          Tailwind CSS is commonly used in modern frontend development
-          because it supports responsive design, reusable UI patterns, and
-          component-based workflows. It is especially popular alongside
-          frameworks such as React, Vue, Next.js, and Laravel.
-        </p>
-        <p class="m-4 leading-normal">
-          Unlike traditional CSS approaches that rely heavily on separate
-          stylesheets, Tailwind encourages developers to build interfaces
-          directly with utility classes, helping speed up development and
-          maintain design consistency across projects.
-        </p>
-      </section>
-      <section id="history" class="w-full min-h-[70vh] md:min-h-[80vh] p-4 md:p-6 scroll-mt-56 md:scroll-mt-28">
-        <h2 class="font-bold text-5xl m-5">History</h2>
-        <img src="images/tired-developer.jpg" alt="" />
-        <p class="m-4 leading-normal">
-          Tailwind CSS was created by Adam Wathan, Jonathan Reinink, David
-          Hemphill, and Steve Schoger. It began as a side project called
-          KiteTail, where Adam experimented with a utility-class approach to
-          styling user interfaces.
-        </p>
-        <p class="m-4 leading-normal">
-          At the time, many developers were frustrated with traditional CSS
-          workflows. Large projects often required huge CSS files, complex
-          class naming systems, and constant switching between HTML and
-          stylesheets. Maintaining consistency across layouts, spacing,
-          typography, and colors also became difficult as projects grew
-          larger.
-        </p>
-        <p class="m-4 leading-normal">
-          Tailwind CSS introduced a different way of thinking about styling.
-          Instead of creating custom CSS classes for every component,
-          developers could build interfaces using small reusable utility
-          classes directly in HTML. This utility-first approach focused on
-          speed, consistency, and reusable design patterns.
-        </p>
-        <h3 class="m-4 text-3xl font-bold">Timeline</h3>
-        <ul class="m-4 list-disc space-y-3 pl-6 text-base md:text-lg leading-7">
-          <li>
-            <strong>2017:</strong> Tailwind CSS was officially released as an
-            open-source project. Its utility-first philosophy was very
-            different from many traditional CSS approaches at the time.
-          </li>
-          <li>
-            <strong>2018-2019:</strong> Tailwind began gaining attention in
-            the frontend community, especially among developers working with
-            React, Vue, and Laravel. Many developers appreciated its fast
-            development workflow and flexible design system.
-          </li>
-          <li>
-            <strong>2020:</strong> Tailwind CSS became increasingly popular
-            in modern web development. The framework started being adopted in
-            startups, SaaS products, dashboards, and component-based frontend
-            projects.
-          </li>
-          <li>
-            <strong>2021:</strong> Tailwind CSS v3 introduced the
-            Just-in-Time (JIT) engine by default. This significantly improved
-            build performance, reduced generated CSS size, and allowed
-            developers to generate styles instantly during development.
-          </li>
-          <li>
-            <strong>Today:</strong> Tailwind CSS is now one of the most
-            widely used CSS frameworks in modern frontend development. It is
-            commonly used with frameworks such as React, Next.js, Vue, and
-            Laravel to build responsive and scalable user interfaces.
-          </li>
-          <li>
-            Its utility-first philosophy has also influenced modern frontend
-            workflows, component-based UI development, and design system
-            practices across the industry.
-          </li>
-        </ul>
-      </section>
-      <section id="why-use" class="w-full min-h-[70vh] md:min-h-[80vh] p-4 md:p-6 scroll-mt-56 md:scroll-mt-28">
-        <h2 class="font-bold text-5xl m-5">Why Use Tailwind CSS?</h2>
-        <img src="images/so-what.png" alt="why use it" />
-        <p class="m-4 leading-normal">
-          As web projects grow larger, traditional CSS can become difficult
-          to manage. Developers often spend time creating class names,
-          organizing stylesheets, and searching through large CSS files just
-          to make small design changes. Maintaining consistent spacing,
-          colors, and layouts across a project can also become challenging.
-        </p>
-        <p class="m-4 leading-normal">
-          Tailwind CSS was designed to help solve these problems by using
-          small reusable utility classes directly in HTML. Instead of
-          repeatedly writing custom CSS, developers can build interfaces more
-          quickly using predefined classes for layout, spacing, typography,
-          colors, and responsiveness.
-        </p>
-        <p class="m-4 leading-normal">
-          This approach can speed up development, improve design consistency,
-          and reduce the amount of unused custom CSS. It also works especially
-          well with modern frameworks like React, Vue, Next.js, and Laravel,
-          where interfaces are often built using reusable components.
-        </p>
-        <p class="m-4 leading-normal">
-          Tailwind's responsive utility system also makes it easier to create
-          layouts for different screen sizes without writing large amounts of
-          media query code.
-        </p>
-      </section>
-      <section id="pros-cons" class="w-full min-h-[70vh] md:min-h-[80vh] p-4 md:p-6 scroll-mt-56 md:scroll-mt-28">
-        <h2 class="font-bold text-5xl m-5">Advantages and Disadvantages</h2>
-        <img src="images/pros-cons.png" alt="thumbs up and thumps down" />
-        <p class="m-4 leading-normal">
-          Like any technology, Tailwind CSS has both strengths and
-          limitations. While many developers appreciate its speed and
-          flexibility, others find its workflow and styling approach difficult
-          to adapt to.
-        </p>
-        <div class="m-4 grid gap-6 md:grid-cols-2">
-          <div class="rounded border border-emerald-200 bg-emerald-50 p-4">
-            <h3 class="mb-4 text-3xl font-bold">Advantages</h3>
-            <div class="space-y-4 text-base md:text-lg leading-7">
-              <div>
-                <h4 class="font-semibold">Faster Development</h4>
-                <p>
-                  Utility classes make it possible to build interfaces
-                  quickly without writing large amounts of custom CSS.
-                </p>
+          "
+          src="images/webdesign-hero.jpg"
+          alt="Laptop screen displaying a web design layout"
+        />
+        <section
+          id="about"
+          class="w-full min-h-[70vh] md:min-h-[80vh] p-4 md:p-6 scroll-mt-56 md:scroll-mt-28"
+        >
+          <h2 class="font-bold text-5xl m-5">What is Tailwind CSS?</h2>
+          <p class="m-4 leading-normal">
+            Tailwind CSS is a utility-first CSS framework used to build modern
+            and responsive user interfaces. Unlike traditional CSS frameworks
+            that provide pre-designed components, Tailwind focuses on small
+            reusable utility classes that developers combine directly in HTML.
+          </p>
+          <p class="m-4 leading-normal">
+            Instead of creating large custom CSS files and naming classes for
+            every element, developers use utility classes such as
+            <code class="rounded bg-slate-200 px-1">flex</code>,
+            <code class="rounded bg-slate-200 px-1">p-4</code>,
+            <code class="rounded bg-slate-200 px-1">bg-blue-600</code>
+            and <code class="rounded bg-slate-200 px-1">text-center</code> to
+            control layout, spacing, colors, typography, and responsiveness.
+          </p>
+          <p class="m-4 leading-normal">
+            Each utility class usually represents a single styling rule. By
+            combining multiple utility classes together, developers can quickly
+            create custom interfaces without constantly switching between HTML
+            and CSS files.
+          </p>
+          <p class="m-4 leading-normal">
+            Tailwind CSS is commonly used in modern frontend development because
+            it supports responsive design, reusable UI patterns, and
+            component-based workflows. It is especially popular alongside
+            frameworks such as React, Vue, Next.js, and Laravel.
+          </p>
+          <p class="m-4 leading-normal">
+            Unlike traditional CSS approaches that rely heavily on separate
+            stylesheets, Tailwind encourages developers to build interfaces
+            directly with utility classes, helping speed up development and
+            maintain design consistency across projects.
+          </p>
+        </section>
+        <section
+          id="history"
+          class="w-full min-h-[70vh] md:min-h-[80vh] p-4 md:p-6 scroll-mt-56 md:scroll-mt-28"
+        >
+          <h2 class="font-bold text-5xl m-5">History</h2>
+          <img src="images/tired-developer.jpg" alt="Developer looking frustrated while working on code" />
+          <p class="m-4 leading-normal">
+            Tailwind CSS was created by Adam Wathan, Jonathan Reinink, David
+            Hemphill, and Steve Schoger. It began as a side project called
+            KiteTail, where Adam experimented with a utility-class approach to
+            styling user interfaces.
+          </p>
+          <p class="m-4 leading-normal">
+            At the time, many developers were frustrated with traditional CSS
+            workflows. Large projects often required huge CSS files, complex
+            class naming systems, and constant switching between HTML and
+            stylesheets. Maintaining consistency across layouts, spacing,
+            typography, and colors also became difficult as projects grew
+            larger.
+          </p>
+          <p class="m-4 leading-normal">
+            Tailwind CSS introduced a different way of thinking about styling.
+            Instead of creating custom CSS classes for every component,
+            developers could build interfaces using small reusable utility
+            classes directly in HTML. This utility-first approach focused on
+            speed, consistency, and reusable design patterns.
+          </p>
+          <h3 class="m-4 text-3xl font-bold">Timeline</h3>
+          <ul
+            class="m-4 list-disc space-y-3 pl-6 text-base md:text-lg leading-7"
+          >
+            <li>
+              <strong>2017:</strong> Tailwind CSS was officially released as an
+              open-source project. Its utility-first philosophy was very
+              different from many traditional CSS approaches at the time.
+            </li>
+            <li>
+              <strong>2018-2019:</strong> Tailwind began gaining attention in
+              the frontend community, especially among developers working with
+              React, Vue, and Laravel. Many developers appreciated its fast
+              development workflow and flexible design system.
+            </li>
+            <li>
+              <strong>2020:</strong> Tailwind CSS became increasingly popular in
+              modern web development. The framework started being adopted in
+              startups, SaaS products, dashboards, and component-based frontend
+              projects.
+            </li>
+            <li>
+              <strong>2021:</strong> Tailwind CSS v3 introduced the Just-in-Time
+              (JIT) engine by default. This significantly improved build
+              performance, reduced generated CSS size, and allowed developers to
+              generate styles instantly during development.
+            </li>
+            <li>
+              <strong>Today:</strong> Tailwind CSS is now one of the most widely
+              used CSS frameworks in modern frontend development. It is commonly
+              used with frameworks such as React, Next.js, Vue, and Laravel to
+              build responsive and scalable user interfaces.
+            </li>
+            <li>
+              Its utility-first philosophy has also influenced modern frontend
+              workflows, component-based UI development, and design system
+              practices across the industry.
+            </li>
+          </ul>
+        </section>
+        <section
+          id="why-use"
+          class="w-full min-h-[70vh] md:min-h-[80vh] p-4 md:p-6 scroll-mt-56 md:scroll-mt-28"
+        >
+          <h2 class="font-bold text-5xl m-5">Why Use Tailwind CSS?</h2>
+          <img src="images/so-what.png" alt="why use it" />
+          <p class="m-4 leading-normal">
+            As web projects grow larger, traditional CSS can become difficult to
+            manage. Developers often spend time creating class names, organizing
+            stylesheets, and searching through large CSS files just to make
+            small design changes. Maintaining consistent spacing, colors, and
+            layouts across a project can also become challenging.
+          </p>
+          <p class="m-4 leading-normal">
+            Tailwind CSS was designed to help solve these problems by using
+            small reusable utility classes directly in HTML. Instead of
+            repeatedly writing custom CSS, developers can build interfaces more
+            quickly using predefined classes for layout, spacing, typography,
+            colors, and responsiveness.
+          </p>
+          <p class="m-4 leading-normal">
+            This approach can speed up development, improve design consistency,
+            and reduce the amount of unused custom CSS. It also works especially
+            well with modern frameworks like React, Vue, Next.js, and Laravel,
+            where interfaces are often built using reusable components.
+          </p>
+          <p class="m-4 leading-normal">
+            Tailwind's responsive utility system also makes it easier to create
+            layouts for different screen sizes without writing large amounts of
+            media query code.
+          </p>
+        </section>
+        <section
+          id="pros-cons"
+          class="w-full min-h-[70vh] md:min-h-[80vh] p-4 md:p-6 scroll-mt-56 md:scroll-mt-28"
+        >
+          <h2 class="font-bold text-5xl m-5">Advantages and Disadvantages</h2>
+          <img src="images/pros-cons.png" alt="Thumbs up and thumbs down" />
+          <p class="m-4 leading-normal">
+            Like any technology, Tailwind CSS has both strengths and
+            limitations. While many developers appreciate its speed and
+            flexibility, others find its workflow and styling approach difficult
+            to adapt to.
+          </p>
+          <div class="m-4 grid gap-6 md:grid-cols-2">
+            <div class="rounded border border-emerald-200 bg-emerald-50 p-4">
+              <h3 class="mb-4 text-3xl font-bold">Advantages</h3>
+              <div class="space-y-4 text-base md:text-lg leading-7">
+                <div>
+                  <h4 class="font-semibold">Faster Development</h4>
+                  <p>
+                    Utility classes make it possible to build interfaces quickly
+                    without writing large amounts of custom CSS.
+                  </p>
+                </div>
+                <div>
+                  <h4 class="font-semibold">Consistent Styling</h4>
+                  <p>
+                    Tailwind provides a shared design system that helps maintain
+                    consistency across layouts, spacing, typography, and colors.
+                  </p>
+                </div>
+                <div>
+                  <h4 class="font-semibold">Responsive Design</h4>
+                  <p>
+                    Built-in responsive utilities such as
+                    <code class="rounded bg-slate-200 px-1">md:flex</code> and
+                    <code class="rounded bg-slate-200 px-1">lg:text-4xl</code>
+                    make it easier to create mobile-friendly layouts.
+                  </p>
+                </div>
+                <div>
+                  <h4 class="font-semibold">Less Unused CSS</h4>
+                  <p>
+                    Tailwind can generate only the styles used in the project,
+                    helping reduce unnecessary CSS in production builds.
+                  </p>
+                </div>
+                <div>
+                  <h4 class="font-semibold">
+                    Works Well with Modern Frameworks
+                  </h4>
+                  <p>
+                    Tailwind integrates well with frameworks like React, Vue,
+                    Next.js, and Laravel, especially in component-based
+                    development.
+                  </p>
+                </div>
               </div>
-              <div>
-                <h4 class="font-semibold">Consistent Styling</h4>
-                <p>
-                  Tailwind provides a shared design system that helps
-                  maintain consistency across layouts, spacing, typography,
-                  and colors.
-                </p>
-              </div>
-              <div>
-                <h4 class="font-semibold">Responsive Design</h4>
-                <p>
-                  Built-in responsive utilities such as
-                  <code class="rounded bg-slate-200 px-1">md:flex</code> and
-                  <code class="rounded bg-slate-200 px-1">lg:text-4xl</code>
-                  make it easier to create mobile-friendly layouts.
-                </p>
-              </div>
-              <div>
-                <h4 class="font-semibold">Less Unused CSS</h4>
-                <p>
-                  Tailwind can generate only the styles used in the project,
-                  helping reduce unnecessary CSS in production builds.
-                </p>
-              </div>
-              <div>
-                <h4 class="font-semibold">
-                  Works Well with Modern Frameworks
-                </h4>
-                <p>
-                  Tailwind integrates well with frameworks like React, Vue,
-                  Next.js, and Laravel, especially in component-based
-                  development.
-                </p>
+            </div>
+            <div class="rounded border border-rose-200 bg-rose-50 p-4">
+              <h3 class="mb-4 text-3xl font-bold">Disadvantages</h3>
+              <div class="space-y-4 text-base md:text-lg leading-7">
+                <div>
+                  <h4 class="font-semibold">Large Utility Class Lists</h4>
+                  <p>
+                    HTML elements can contain many utility classes, especially
+                    in complex components.
+                  </p>
+                </div>
+                <div>
+                  <h4 class="font-semibold">Learning Curve</h4>
+                  <p>
+                    Developers need time to become familiar with Tailwind's
+                    utility classes and naming system.
+                  </p>
+                </div>
+                <div>
+                  <h4 class="font-semibold">
+                    Readability and Maintainability Concerns
+                  </h4>
+                  <p>
+                    Large numbers of utility classes can make HTML harder to
+                    read and may cause the markup to look messy, especially in
+                    complex components. Some developers also dislike placing
+                    large amounts of styling directly inside HTML.
+                  </p>
+                </div>
+                <div>
+                  <h4 class="font-semibold">Different from Traditional CSS</h4>
+                  <p>
+                    Developers who are used to writing separate CSS files may
+                    find the utility-first approach unusual at first.
+                  </p>
+                </div>
+                <div>
+                  <h4 class="font-semibold">
+                    Over-Reliance on Framework Conventions
+                  </h4>
+                  <p>
+                    Projects can become highly dependent on Tailwind's ecosystem
+                    and design patterns.
+                  </p>
+                </div>
               </div>
             </div>
           </div>
-          <div class="rounded border border-rose-200 bg-rose-50 p-4">
-            <h3 class="mb-4 text-3xl font-bold">Disadvantages</h3>
-            <div class="space-y-4 text-base md:text-lg leading-7">
-              <div>
-                <h4 class="font-semibold">Large Utility Class Lists</h4>
-                <p>
-                  HTML elements can contain many utility classes, especially
-                  in complex components.
-                </p>
-              </div>
-              <div>
-                <h4 class="font-semibold">Learning Curve</h4>
-                <p>
-                  Developers need time to become familiar with Tailwind's
-                  utility classes and naming system.
-                </p>
-              </div>
-              <div>
-                <h4 class="font-semibold">
-                  Readability and Maintainability Concerns
-                </h4>
-                <p>
-                  Large numbers of utility classes can make HTML harder to
-                  read and may cause the markup to look messy, especially in
-                  complex components. Some developers also dislike placing
-                  large amounts of styling directly inside HTML.
-                </p>
-              </div>
-              <div>
-                <h4 class="font-semibold">Different from Traditional CSS</h4>
-                <p>
-                  Developers who are used to writing separate CSS files may
-                  find the utility-first approach unusual at first.
-                </p>
-              </div>
-              <div>
-                <h4 class="font-semibold">
-                  Over-Reliance on Framework Conventions
-                </h4>
-                <p>
-                  Projects can become highly dependent on Tailwind's ecosystem
-                  and design patterns.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section id="how" class="w-full min-h-[70vh] md:min-h-[80vh] p-4 md:p-6 scroll-mt-56 md:scroll-mt-28">
-        <h2 class="font-bold text-5xl m-5">How to Use Tailwind CSS</h2>
-        <img src="images/user-manual .jpg" alt="user manual" />
-        <p class="m-4 leading-normal">
-          Tailwind CSS is used by applying utility classes directly to HTML
-          elements. Instead of writing custom CSS rules for each component,
-          developers combine predefined utility classes to control layout,
-          spacing, colors, typography, and responsiveness.
-        </p>
-        <div class="m-4 space-y-6">
-          <article class="rounded border border-slate-200 bg-slate-50 p-4">
-            <h3 class="mb-3 text-2xl font-bold">Basic Example</h3>
-            <pre class="mb-4 overflow-x-auto rounded bg-slate-950 p-4 text-sm text-slate-100"><code>&lt;div class="bg-blue-600 text-white p-4 rounded-lg text-center"&gt;
+        </section>
+        <section
+          id="how"
+          class="w-full min-h-[70vh] md:min-h-[80vh] p-4 md:p-6 scroll-mt-56 md:scroll-mt-28"
+        >
+          <h2 class="font-bold text-5xl m-5">How to Use Tailwind CSS</h2>
+          <img src="images/user-manual .jpg" alt="user manual" />
+          <p class="m-4 leading-normal">
+            Tailwind CSS is used by applying utility classes directly to HTML
+            elements. Instead of writing custom CSS rules for each component,
+            developers combine predefined utility classes to control layout,
+            spacing, colors, typography, and responsiveness.
+          </p>
+          <div class="m-4 space-y-6">
+            <article class="rounded border border-slate-200 bg-slate-50 p-4">
+              <h3 class="mb-3 text-2xl font-bold">Basic Example</h3>
+              <pre
+                class="mb-4 overflow-x-auto rounded bg-slate-950 p-4 text-sm text-slate-100"
+              ><code>&lt;div class="bg-blue-600 text-white p-4 rounded-lg text-center"&gt;
               Hello Tailwind CSS
               &lt;/div&gt;</code></pre>
-            <p class="mb-3 text-base md:text-lg leading-7">
-              In this example:
-            </p>
-            <ul class="list-disc space-y-1 pl-6 text-base md:text-lg leading-7">
-              <li>
-                <code class="rounded bg-slate-200 px-1">bg-blue-600</code>
-                sets the background color
-              </li>
-              <li>
-                <code class="rounded bg-slate-200 px-1">text-white</code>
-                changes the text color
-              </li>
-              <li>
-                <code class="rounded bg-slate-200 px-1">p-4</code> adds
-                padding
-              </li>
-              <li>
-                <code class="rounded bg-slate-200 px-1">rounded-lg</code>
-                creates rounded corners
-              </li>
-              <li>
-                <code class="rounded bg-slate-200 px-1">text-center</code>
-                centers the text
-              </li>
-            </ul>
-            <p class="mt-4 text-base md:text-lg leading-7">
-              By combining utility classes, developers can quickly build and
-              customize user interfaces without writing additional CSS.
-            </p>
-          </article>
-          <article class="rounded border border-slate-200 bg-slate-50 p-4">
-            <h3 class="mb-3 text-2xl font-bold">Responsive Design</h3>
-            <p class="mb-3 text-base md:text-lg leading-7">
-              One of Tailwind's most popular features is its built-in
-              responsive design system. Developers can apply different styles
-              at different screen sizes using responsive prefixes.
-            </p>
-            <pre class="mb-4 overflow-x-auto rounded bg-slate-950 p-4 text-sm text-slate-100"><code>&lt;div class="text-sm md:text-xl lg:text-3xl"&gt;
+              <p class="mb-3 text-base md:text-lg leading-7">
+                In this example:
+              </p>
+              <ul
+                class="list-disc space-y-1 pl-6 text-base md:text-lg leading-7"
+              >
+                <li>
+                  <code class="rounded bg-slate-200 px-1">bg-blue-600</code>
+                  sets the background color
+                </li>
+                <li>
+                  <code class="rounded bg-slate-200 px-1">text-white</code>
+                  changes the text color
+                </li>
+                <li>
+                  <code class="rounded bg-slate-200 px-1">p-4</code> adds
+                  padding
+                </li>
+                <li>
+                  <code class="rounded bg-slate-200 px-1">rounded-lg</code>
+                  creates rounded corners
+                </li>
+                <li>
+                  <code class="rounded bg-slate-200 px-1">text-center</code>
+                  centers the text
+                </li>
+              </ul>
+              <p class="mt-4 text-base md:text-lg leading-7">
+                By combining utility classes, developers can quickly build and
+                customize user interfaces without writing additional CSS.
+              </p>
+            </article>
+            <article class="rounded border border-slate-200 bg-slate-50 p-4">
+              <h3 class="mb-3 text-2xl font-bold">Responsive Design</h3>
+              <p class="mb-3 text-base md:text-lg leading-7">
+                One of Tailwind's most popular features is its built-in
+                responsive design system. Developers can apply different styles
+                at different screen sizes using responsive prefixes.
+              </p>
+              <pre
+                class="mb-4 overflow-x-auto rounded bg-slate-950 p-4 text-sm text-slate-100"
+              ><code>&lt;div class="text-sm md:text-xl lg:text-3xl"&gt;
                 Responsive Text
               &lt;/div&gt;</code></pre>
-            <ul class="list-disc space-y-1 pl-6 text-base md:text-lg leading-7">
-              <li>
-                <code class="rounded bg-slate-200 px-1">text-sm</code>
-                is applied on small screens
-              </li>
-              <li>
-                <code class="rounded bg-slate-200 px-1">md:text-xl</code>
-                is applied on medium screens
-              </li>
-              <li>
-                <code class="rounded bg-slate-200 px-1">lg:text-3xl</code>
-                is applied on large screens
-              </li>
-            </ul>
-            <p class="mt-4 text-base md:text-lg leading-7">
-              This makes it easier to create layouts that work across mobile,
-              tablet, and desktop devices.
-            </p>
-          </article>
-        </div>
-        <div class="m-4 space-y-6">
-          <article class="rounded border border-slate-200 bg-slate-50 p-4">
-            <h3 class="mb-3 text-2xl font-bold">
-              Common Utility Categories
-            </h3>
-            <p class="mb-3 text-base md:text-lg leading-7">
-              Tailwind provides thousands of utility classes that can be
-              grouped into several common categories. These utilities allow
-              developers to build layouts and style components without writing
-              custom CSS.
-            </p>
-            <div class="grid gap-4 lg:grid-cols-2">
-              <div class="rounded border border-slate-200 bg-white p-4">
-                <h4 class="mb-2 text-xl font-semibold">Layout</h4>
-                <p class="mb-3 text-base md:text-lg leading-7">
-                  Classes such as <code class="rounded bg-slate-200 px-1">flex</code>,
-                  <code class="rounded bg-slate-200 px-1">grid</code>, and
-                  <code class="rounded bg-slate-200 px-1">container</code>
-                  help control how elements are positioned and arranged on the
-                  page. They are commonly used to create navigation bars,
-                  cards, dashboards, and responsive page layouts.
-                </p>
-                <pre class="overflow-x-auto rounded bg-slate-950 p-3 text-sm text-slate-100"><code>&lt;div class="flex justify-center items-center"&gt;
+              <ul
+                class="list-disc space-y-1 pl-6 text-base md:text-lg leading-7"
+              >
+                <li>
+                  <code class="rounded bg-slate-200 px-1">text-sm</code>
+                  is applied on small screens
+                </li>
+                <li>
+                  <code class="rounded bg-slate-200 px-1">md:text-xl</code>
+                  is applied on medium screens
+                </li>
+                <li>
+                  <code class="rounded bg-slate-200 px-1">lg:text-3xl</code>
+                  is applied on large screens
+                </li>
+              </ul>
+              <p class="mt-4 text-base md:text-lg leading-7">
+                This makes it easier to create layouts that work across mobile,
+                tablet, and desktop devices.
+              </p>
+            </article>
+          </div>
+          <div class="m-4 space-y-6">
+            <article class="rounded border border-slate-200 bg-slate-50 p-4">
+              <h3 class="mb-3 text-2xl font-bold">Common Utility Categories</h3>
+              <p class="mb-3 text-base md:text-lg leading-7">
+                Tailwind provides thousands of utility classes that can be
+                grouped into several common categories. These utilities allow
+                developers to build layouts and style components without writing
+                custom CSS.
+              </p>
+              <div class="grid gap-4 lg:grid-cols-2">
+                <div class="rounded border border-slate-200 bg-white p-4">
+                  <h4 class="mb-2 text-xl font-semibold">Layout</h4>
+                  <p class="mb-3 text-base md:text-lg leading-7">
+                    Classes such as
+                    <code class="rounded bg-slate-200 px-1">flex</code>,
+                    <code class="rounded bg-slate-200 px-1">grid</code>, and
+                    <code class="rounded bg-slate-200 px-1">container</code>
+                    help control how elements are positioned and arranged on the
+                    page. They are commonly used to create navigation bars,
+                    cards, dashboards, and responsive page layouts.
+                  </p>
+                  <pre
+                    class="overflow-x-auto rounded bg-slate-950 p-3 text-sm text-slate-100"
+                  ><code>&lt;div class="flex justify-center items-center"&gt;
                   &lt;div class="grid grid-cols-3 gap-4"&gt;</code></pre>
-              </div>
-              <div class="rounded border border-slate-200 bg-white p-4">
-                <h4 class="mb-2 text-xl font-semibold">Spacing</h4>
-                <p class="mb-3 text-base md:text-lg leading-7">
-                  Utilities like <code class="rounded bg-slate-200 px-1">p-4</code>,
-                  <code class="rounded bg-slate-200 px-1">m-2</code>, and
-                  <code class="rounded bg-slate-200 px-1">gap-6</code>
-                  control padding, margins, and spacing between elements.
-                  This helps create consistent layouts without manually
-                  writing spacing rules in CSS.
-                </p>
-                <pre class="overflow-x-auto rounded bg-slate-950 p-3 text-sm text-slate-100"><code>&lt;div class="p-4"&gt;
+                </div>
+                <div class="rounded border border-slate-200 bg-white p-4">
+                  <h4 class="mb-2 text-xl font-semibold">Spacing</h4>
+                  <p class="mb-3 text-base md:text-lg leading-7">
+                    Utilities like
+                    <code class="rounded bg-slate-200 px-1">p-4</code>,
+                    <code class="rounded bg-slate-200 px-1">m-2</code>, and
+                    <code class="rounded bg-slate-200 px-1">gap-6</code>
+                    control padding, margins, and spacing between elements. This
+                    helps create consistent layouts without manually writing
+                    spacing rules in CSS.
+                  </p>
+                  <pre
+                    class="overflow-x-auto rounded bg-slate-950 p-3 text-sm text-slate-100"
+                  ><code>&lt;div class="p-4"&gt;
                   &lt;div class="m-2"&gt;
                   &lt;div class="gap-6"&gt;</code></pre>
-              </div>
-              <div class="rounded border border-slate-200 bg-white p-4">
-                <h4 class="mb-2 text-xl font-semibold">Typography</h4>
-                <p class="mb-3 text-base md:text-lg leading-7">
-                  Classes such as <code class="rounded bg-slate-200 px-1">text-xl</code>,
-                  <code class="rounded bg-slate-200 px-1">font-bold</code>,
-                  and <code class="rounded bg-slate-200 px-1">leading-relaxed</code>
-                  control the appearance of text, including font size, weight,
-                  alignment, and line spacing.
-                </p>
-                <pre class="overflow-x-auto rounded bg-slate-950 p-3 text-sm text-slate-100"><code>&lt;h1 class="text-3xl font-bold"&gt;
+                </div>
+                <div class="rounded border border-slate-200 bg-white p-4">
+                  <h4 class="mb-2 text-xl font-semibold">Typography</h4>
+                  <p class="mb-3 text-base md:text-lg leading-7">
+                    Classes such as
+                    <code class="rounded bg-slate-200 px-1">text-xl</code>,
+                    <code class="rounded bg-slate-200 px-1">font-bold</code>,
+                    and
+                    <code class="rounded bg-slate-200 px-1"
+                      >leading-relaxed</code
+                    >
+                    control the appearance of text, including font size, weight,
+                    alignment, and line spacing.
+                  </p>
+                  <pre
+                    class="overflow-x-auto rounded bg-slate-950 p-3 text-sm text-slate-100"
+                  ><code>&lt;h1 class="text-3xl font-bold"&gt;
                   &lt;p class="leading-relaxed"&gt;</code></pre>
-              </div>
-              <div class="rounded border border-slate-200 bg-white p-4">
-                <h4 class="mb-2 text-xl font-semibold">Colors</h4>
-                <p class="mb-3 text-base md:text-lg leading-7">
-                  Utilities like <code class="rounded bg-slate-200 px-1">bg-blue-500</code>,
-                  <code class="rounded bg-slate-200 px-1">text-white</code>,
-                  and <code class="rounded bg-slate-200 px-1">border-gray-300</code>
-                  allow developers to quickly apply colors to backgrounds,
-                  text, and borders while maintaining design consistency.
-                </p>
-                <pre class="overflow-x-auto rounded bg-slate-950 p-3 text-sm text-slate-100"><code>&lt;div class="bg-blue-500"&gt;
+                </div>
+                <div class="rounded border border-slate-200 bg-white p-4">
+                  <h4 class="mb-2 text-xl font-semibold">Colors</h4>
+                  <p class="mb-3 text-base md:text-lg leading-7">
+                    Utilities like
+                    <code class="rounded bg-slate-200 px-1">bg-blue-500</code>,
+                    <code class="rounded bg-slate-200 px-1">text-white</code>,
+                    and
+                    <code class="rounded bg-slate-200 px-1"
+                      >border-gray-300</code
+                    >
+                    allow developers to quickly apply colors to backgrounds,
+                    text, and borders while maintaining design consistency.
+                  </p>
+                  <pre
+                    class="overflow-x-auto rounded bg-slate-950 p-3 text-sm text-slate-100"
+                  ><code>&lt;div class="bg-blue-500"&gt;
                   &lt;p class="text-white"&gt;
                   &lt;div class="border-gray-300"&gt;</code></pre>
-              </div>
-              <div class="rounded border border-slate-200 bg-white p-4">
-                <h4 class="mb-2 text-xl font-semibold">Borders and Effects</h4>
-                <p class="mb-3 text-base md:text-lg leading-7">
-                  Classes such as <code class="rounded bg-slate-200 px-1">rounded-lg</code>,
-                  <code class="rounded bg-slate-200 px-1">shadow-md</code>,
-                  and <code class="rounded bg-slate-200 px-1">border</code>
-                  are used to add borders, rounded corners, shadows, and other
-                  visual effects to elements.
-                </p>
-                <pre class="overflow-x-auto rounded bg-slate-950 p-3 text-sm text-slate-100"><code>&lt;div class="rounded-lg"&gt;
+                </div>
+                <div class="rounded border border-slate-200 bg-white p-4">
+                  <h4 class="mb-2 text-xl font-semibold">
+                    Borders and Effects
+                  </h4>
+                  <p class="mb-3 text-base md:text-lg leading-7">
+                    Classes such as
+                    <code class="rounded bg-slate-200 px-1">rounded-lg</code>,
+                    <code class="rounded bg-slate-200 px-1">shadow-md</code>,
+                    and <code class="rounded bg-slate-200 px-1">border</code>
+                    are used to add borders, rounded corners, shadows, and other
+                    visual effects to elements.
+                  </p>
+                  <pre
+                    class="overflow-x-auto rounded bg-slate-950 p-3 text-sm text-slate-100"
+                  ><code>&lt;div class="rounded-lg"&gt;
                   &lt;div class="shadow-md"&gt;
                   &lt;div class="border"&gt;</code></pre>
-              </div>
-              <div class="rounded border border-slate-200 bg-white p-4">
-                <h4 class="mb-2 text-xl font-semibold">Responsive Design</h4>
-                <p class="mb-3 text-base md:text-lg leading-7">
-                  Tailwind includes responsive prefixes such as
-                  <code class="rounded bg-slate-200 px-1">sm:</code>,
-                  <code class="rounded bg-slate-200 px-1">md:</code>,
-                  <code class="rounded bg-slate-200 px-1">lg:</code>, and
-                  <code class="rounded bg-slate-200 px-1">xl:</code>. These
-                  allow developers to apply different styles at different
-                  screen sizes, making it easier to build mobile-friendly
-                  websites.
-                </p>
-                <pre class="overflow-x-auto rounded bg-slate-950 p-3 text-sm text-slate-100"><code>&lt;div class="md:flex"&gt;
+                </div>
+                <div class="rounded border border-slate-200 bg-white p-4">
+                  <h4 class="mb-2 text-xl font-semibold">Responsive Design</h4>
+                  <p class="mb-3 text-base md:text-lg leading-7">
+                    Tailwind includes responsive prefixes such as
+                    <code class="rounded bg-slate-200 px-1">sm:</code>,
+                    <code class="rounded bg-slate-200 px-1">md:</code>,
+                    <code class="rounded bg-slate-200 px-1">lg:</code>, and
+                    <code class="rounded bg-slate-200 px-1">xl:</code>. These
+                    allow developers to apply different styles at different
+                    screen sizes, making it easier to build mobile-friendly
+                    websites.
+                  </p>
+                  <pre
+                    class="overflow-x-auto rounded bg-slate-950 p-3 text-sm text-slate-100"
+                  ><code>&lt;div class="md:flex"&gt;
                   &lt;h1 class="lg:text-4xl"&gt;</code></pre>
-              </div>
-              <div class="rounded border border-slate-200 bg-white p-4 lg:col-span-2">
-                <h4 class="mb-2 text-xl font-semibold">States and Interactions</h4>
-                <p class="mb-3 text-base md:text-lg leading-7">
-                  Classes such as <code class="rounded bg-slate-200 px-1">hover:</code>,
-                  <code class="rounded bg-slate-200 px-1">focus:</code>, and
-                  <code class="rounded bg-slate-200 px-1">active:</code>
-                  make it easy to define interactive states without writing
-                  additional CSS. These utilities are commonly used for
-                  buttons, forms, and navigation elements.
-                </p>
-                <pre class="overflow-x-auto rounded bg-slate-950 p-3 text-sm text-slate-100"><code>&lt;button class="hover:bg-blue-700"&gt;
+                </div>
+                <div
+                  class="rounded border border-slate-200 bg-white p-4 lg:col-span-2"
+                >
+                  <h4 class="mb-2 text-xl font-semibold">
+                    States and Interactions
+                  </h4>
+                  <p class="mb-3 text-base md:text-lg leading-7">
+                    Classes such as
+                    <code class="rounded bg-slate-200 px-1">hover:</code>,
+                    <code class="rounded bg-slate-200 px-1">focus:</code>, and
+                    <code class="rounded bg-slate-200 px-1">active:</code>
+                    make it easy to define interactive states without writing
+                    additional CSS. These utilities are commonly used for
+                    buttons, forms, and navigation elements.
+                  </p>
+                  <pre
+                    class="overflow-x-auto rounded bg-slate-950 p-3 text-sm text-slate-100"
+                  ><code>&lt;button class="hover:bg-blue-700"&gt;
                   &lt;input class="focus:ring-2"&gt;
                   &lt;button class="active:scale-95"&gt;</code></pre>
+                </div>
               </div>
+            </article>
+            <article class="rounded border border-slate-200 bg-slate-50 p-4">
+              <h3 class="mb-3 text-2xl font-bold">Development Workflow</h3>
+              <p class="text-base md:text-lg leading-7">
+                Developers typically combine multiple utility classes together
+                to build complete components and layouts. This utility-first
+                approach allows teams to prototype quickly, maintain design
+                consistency, and reduce the need for large custom CSS files.
+              </p>
+            </article>
+          </div>
+        </section>
+        <section
+          id="versus"
+          class="w-full min-h-[70vh] md:min-h-[80vh] p-4 md:p-6 scroll-mt-56 md:scroll-mt-28"
+        >
+          <h2 class="font-bold text-5xl m-5">Regular CSS vs Tailwind CSS?</h2>
+          <img src="images/arm-wrestle.jpg" alt="arm wrestling" />
+          <p class="m-4 leading-normal">
+            Traditional CSS separates structure and styling into different
+            files. Tailwind keeps more styling decisions close to the HTML,
+            which can speed up development once you understand the utility
+            classes.
+          </p>
+          <div class="m-4 grid gap-4 md:grid-cols-2">
+            <div class="rounded border border-slate-200 bg-slate-50 p-4">
+              <h3 class="mb-3 text-2xl font-bold">Traditional CSS</h3>
+              <ul
+                class="list-disc space-y-2 pl-6 text-base md:text-lg leading-7"
+              >
+                <li>Styles are usually written in a separate CSS file.</li>
+                <li>
+                  You create custom class names like
+                  <code class="rounded bg-slate-200 px-1">.card</code> or
+                  <code class="rounded bg-slate-200 px-1">.button</code>.
+                </li>
+                <li>
+                  It gives full control over naming, structure, and
+                  organization.
+                </li>
+                <li>
+                  Large projects can become harder to manage if CSS files grow
+                  too much.
+                </li>
+              </ul>
             </div>
-          </article>
-          <article class="rounded border border-slate-200 bg-slate-50 p-4">
-            <h3 class="mb-3 text-2xl font-bold">Development Workflow</h3>
-            <p class="text-base md:text-lg leading-7">
-              Developers typically combine multiple utility classes together
-              to build complete components and layouts. This utility-first
-              approach allows teams to prototype quickly, maintain design
-              consistency, and reduce the need for large custom CSS files.
-            </p>
-          </article>
-        </div>
-      </section>
-      <section id="versus" class="w-full min-h-[70vh] md:min-h-[80vh] p-4 md:p-6 scroll-mt-56 md:scroll-mt-28">
-        <h2 class="font-bold text-5xl m-5">Regular CSS vs Tailwind CSS?</h2>
-        <img src="images/arm-wrestle.jpg" alt="arm wrestling" />
-        <p class="m-4 leading-normal">
-          Traditional CSS separates structure and styling into different
-          files. Tailwind keeps more styling decisions close to the HTML,
-          which can speed up development once you understand the utility
-          classes.
-        </p>
-        <div class="m-4 grid gap-4 md:grid-cols-2">
-          <div class="rounded border border-slate-200 bg-slate-50 p-4">
-            <h3 class="mb-3 text-2xl font-bold">
-              Traditional CSS
-            </h3>
-            <ul class="list-disc space-y-2 pl-6 text-base md:text-lg leading-7">
-              <li>Styles are usually written in a separate CSS file.</li>
-              <li>
-                You create custom class names like
-                <code class="rounded bg-slate-200 px-1">.card</code> or
-                <code class="rounded bg-slate-200 px-1">.button</code>.
-              </li>
-              <li>
-                It gives full control over naming, structure, and
-                organization.
-              </li>
-              <li>
-                Large projects can become harder to manage if CSS files grow
-                too much.
-              </li>
-            </ul>
+            <div class="rounded border border-sky-200 bg-sky-50 p-4">
+              <h3 class="mb-3 text-2xl font-bold">Tailwind CSS</h3>
+              <ul
+                class="list-disc space-y-2 pl-6 text-base md:text-lg leading-7"
+              >
+                <li>
+                  Styles are applied directly in HTML with utility classes.
+                </li>
+                <li>
+                  Classes describe the design, like
+                  <code class="rounded bg-slate-200 px-1">p-4</code>,
+                  <code class="rounded bg-slate-200 px-1">text-white</code>, and
+                  <code class="rounded bg-slate-200 px-1">flex</code>.
+                </li>
+                <li>
+                  It makes it fast to build layouts without writing much custom
+                  CSS.
+                </li>
+                <li>
+                  Responsive design is built in with prefixes like
+                  <code class="rounded bg-slate-200 px-1">md:</code> and
+                  <code class="rounded bg-slate-200 px-1">lg:</code>.
+                </li>
+              </ul>
+            </div>
           </div>
-          <div class="rounded border border-sky-200 bg-sky-50 p-4">
-            <h3 class="mb-3 text-2xl font-bold">
-              Tailwind CSS
-            </h3>
-            <ul class="list-disc space-y-2 pl-6 text-base md:text-lg leading-7">
-              <li>Styles are applied directly in HTML with utility classes.</li>
-              <li>
-                Classes describe the design, like
-                <code class="rounded bg-slate-200 px-1">p-4</code>,
-                <code class="rounded bg-slate-200 px-1">text-white</code>,
-                and <code class="rounded bg-slate-200 px-1">flex</code>.
-              </li>
-              <li>
-                It makes it fast to build layouts without writing much custom
-                CSS.
-              </li>
-              <li>
-                Responsive design is built in with prefixes like
-                <code class="rounded bg-slate-200 px-1">md:</code> and
-                <code class="rounded bg-slate-200 px-1">lg:</code>.
-              </li>
-            </ul>
-          </div>
-        </div>
-        <div class="m-4 grid gap-6 md:grid-cols-2">
-          <article class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
-            <h3 class="mb-3 text-xl font-bold">Traditional CSS Example</h3>
-            <pre class="overflow-x-auto rounded-xl bg-slate-950 p-4 text-sm text-slate-100"><code>&lt;button class="btn"&gt;Get Started&lt;/button&gt;
+          <div class="m-4 grid gap-6 md:grid-cols-2">
+            <article
+              class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm"
+            >
+              <h3 class="mb-3 text-xl font-bold">Traditional CSS Example</h3>
+              <pre
+                class="overflow-x-auto rounded-xl bg-slate-950 p-4 text-sm text-slate-100"
+              ><code>&lt;button class="btn"&gt;Get Started&lt;/button&gt;
 
               .btn {
                 background: blue;
                 color: white;
                 padding: 1rem;
               }</code></pre>
-          </article>
+            </article>
 
-          <article class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
-            <h3 class="mb-3 text-xl font-bold">Tailwind CSS Example</h3>
-            <pre class="overflow-x-auto rounded-xl bg-slate-950 p-4 text-sm text-slate-100"><code>&lt;button class="bg-blue-600 text-white p-4 rounded-lg"&gt;
+            <article
+              class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm"
+            >
+              <h3 class="mb-3 text-xl font-bold">Tailwind CSS Example</h3>
+              <pre
+                class="overflow-x-auto rounded-xl bg-slate-950 p-4 text-sm text-slate-100"
+              ><code>&lt;button class="bg-blue-600 text-white p-4 rounded-lg"&gt;
                 Get Started
               &lt;/button&gt;</code></pre>
-          </article>
-        </div>
-      </section>
-      <section id="install" class="w-full min-h-[70vh] md:min-h-[80vh] p-4 md:p-6 scroll-mt-56 md:scroll-mt-28">
-        <h2 class="font-bold text-5xl m-5">Installation Methods</h2>
-        <div class="flex flex-col gap-4 md:flex-row md:items-start">
-          <img src="images/wifi-install.png" alt="installing wifi" class="w-full md:w-[35%]" />
-          <div>
-            <p class="m-4 leading-normal">
-              Tailwind CSS can be installed in different ways depending on the
-              project size and development workflow. The two most common
-              methods are CDN and CLI installation.
-            </p>
+            </article>
           </div>
-        </div>
-        <div class="m-4 space-y-6">
-          <article class="rounded border border-slate-200 bg-slate-50 p-4">
-            <h3 class="mb-4 text-3xl font-bold">CDN Installation</h3>
-            <p class="mb-4 text-base md:text-lg leading-7">
-              The CDN version is the simplest way to start using Tailwind CSS.
-              Developers only need to include a script link in the HTML file,
-              and Tailwind classes become immediately available.
-            </p>
-            <pre
-              class="mb-4 overflow-x-auto rounded bg-slate-950 p-4 text-sm text-slate-100"><code>&lt;script src="https://cdn.tailwindcss.com"&gt;&lt;/script&gt;</code></pre>
-            <div class="grid gap-4 md:grid-cols-2">
-              <div class="rounded border border-slate-200 bg-white p-4">
-                <h4 class="mb-2 text-xl font-semibold">Advantages</h4>
-                <ul class="list-disc space-y-1 pl-6 text-base md:text-lg leading-7">
-                  <li>Very quick setup</li>
-                  <li>No installation or build tools required</li>
-                  <li>Good for small projects, demos, and learning</li>
-                  <li>Beginner-friendly</li>
-                </ul>
-              </div>
-              <div class="rounded border border-slate-200 bg-white p-4">
-                <h4 class="mb-2 text-xl font-semibold">Disadvantages</h4>
-                <ul class="list-disc space-y-1 pl-6 text-base md:text-lg leading-7">
-                  <li>Not recommended for production websites</li>
-                  <li>Limited customization</li>
-                  <li>Larger generated CSS</li>
-                  <li>Lower performance compared to build-based setups</li>
-                </ul>
-              </div>
+        </section>
+        <section
+          id="install"
+          class="w-full min-h-[70vh] md:min-h-[80vh] p-4 md:p-6 scroll-mt-56 md:scroll-mt-28"
+        >
+          <h2 class="font-bold text-5xl m-5">Installation Methods</h2>
+          <div class="flex flex-col gap-4 md:flex-row md:items-start">
+            <img
+              src="images/wifi-install.png"
+              alt="installing wifi"
+              class="w-full md:w-[35%]"
+            />
+            <div>
+              <p class="m-4 leading-normal">
+                Tailwind CSS can be installed in different ways depending on the
+                project size and development workflow. The two most common
+                methods are CDN and CLI installation.
+              </p>
             </div>
-          </article>
-          <article class="rounded border border-slate-200 bg-slate-50 p-4">
-            <h3 class="mb-4 text-3xl font-bold">CLI Installation</h3>
-            <p class="mb-4 text-base md:text-lg leading-7">
-              The CLI method uses Node.js and the Tailwind build process to
-              generate optimized CSS files. This is the standard approach for
-              modern web development projects.
-            </p>
-            <pre class="mb-4 overflow-x-auto rounded bg-slate-950 p-4 text-sm text-slate-100"><code>npm install tailwindcss @tailwindcss/cli
+          </div>
+          <div class="m-4 space-y-6">
+            <article class="rounded border border-slate-200 bg-slate-50 p-4">
+              <h3 class="mb-4 text-3xl font-bold">CDN Installation</h3>
+              <p class="mb-4 text-base md:text-lg leading-7">
+                The CDN version is the simplest way to start using Tailwind CSS.
+                Developers only need to include a script link in the HTML file,
+                and Tailwind classes become immediately available.
+              </p>
+              <pre
+                class="mb-4 overflow-x-auto rounded bg-slate-950 p-4 text-sm text-slate-100"
+              ><code>&lt;script src="https://cdn.tailwindcss.com"&gt;&lt;/script&gt;</code></pre>
+              <div class="grid gap-4 md:grid-cols-2">
+                <div class="rounded border border-slate-200 bg-white p-4">
+                  <h4 class="mb-2 text-xl font-semibold">Advantages</h4>
+                  <ul
+                    class="list-disc space-y-1 pl-6 text-base md:text-lg leading-7"
+                  >
+                    <li>Very quick setup</li>
+                    <li>No installation or build tools required</li>
+                    <li>Good for small projects, demos, and learning</li>
+                    <li>Beginner-friendly</li>
+                  </ul>
+                </div>
+                <div class="rounded border border-slate-200 bg-white p-4">
+                  <h4 class="mb-2 text-xl font-semibold">Disadvantages</h4>
+                  <ul
+                    class="list-disc space-y-1 pl-6 text-base md:text-lg leading-7"
+                  >
+                    <li>Not recommended for production websites</li>
+                    <li>Limited customization</li>
+                    <li>Larger generated CSS</li>
+                    <li>Lower performance compared to build-based setups</li>
+                  </ul>
+                </div>
+              </div>
+            </article>
+            <article class="rounded border border-slate-200 bg-slate-50 p-4">
+              <h3 class="mb-4 text-3xl font-bold">CLI Installation</h3>
+              <p class="mb-4 text-base md:text-lg leading-7">
+                The CLI method uses Node.js and the Tailwind build process to
+                generate optimized CSS files. This is the standard approach for
+                modern web development projects.
+              </p>
+              <pre
+                class="mb-4 overflow-x-auto rounded bg-slate-950 p-4 text-sm text-slate-100"
+              ><code>npm install tailwindcss @tailwindcss/cli
               npx @tailwindcss/cli -i ./src/input.css -o ./src/output.css --watch</code></pre>
-            <div class="grid gap-4 md:grid-cols-2">
-              <div class="rounded border border-slate-200 bg-white p-4">
-                <h4 class="mb-2 text-xl font-semibold">Advantages</h4>
-                <ul class="list-disc space-y-1 pl-6 text-base md:text-lg leading-7">
-                  <li>Better performance and optimization</li>
-                  <li>Generates only the styles used in the project</li>
-                  <li>Supports customization and configuration</li>
-                  <li>Better for large or production projects</li>
-                  <li>Works well with frameworks like React and Vue</li>
-                </ul>
+              <div class="grid gap-4 md:grid-cols-2">
+                <div class="rounded border border-slate-200 bg-white p-4">
+                  <h4 class="mb-2 text-xl font-semibold">Advantages</h4>
+                  <ul
+                    class="list-disc space-y-1 pl-6 text-base md:text-lg leading-7"
+                  >
+                    <li>Better performance and optimization</li>
+                    <li>Generates only the styles used in the project</li>
+                    <li>Supports customization and configuration</li>
+                    <li>Better for large or production projects</li>
+                    <li>Works well with frameworks like React and Vue</li>
+                  </ul>
+                </div>
+                <div class="rounded border border-slate-200 bg-white p-4">
+                  <h4 class="mb-2 text-xl font-semibold">Disadvantages</h4>
+                  <ul
+                    class="list-disc space-y-1 pl-6 text-base md:text-lg leading-7"
+                  >
+                    <li>More complex setup</li>
+                    <li>Requires Node.js and build tools</li>
+                    <li>Less beginner-friendly</li>
+                    <li>Requires understanding of the development workflow</li>
+                  </ul>
+                </div>
               </div>
-              <div class="rounded border border-slate-200 bg-white p-4">
-                <h4 class="mb-2 text-xl font-semibold">Disadvantages</h4>
-                <ul class="list-disc space-y-1 pl-6 text-base md:text-lg leading-7">
-                  <li>More complex setup</li>
-                  <li>Requires Node.js and build tools</li>
-                  <li>Less beginner-friendly</li>
-                  <li>Requires understanding of the development workflow</li>
-                </ul>
+            </article>
+          </div>
+        </section>
+        <section
+          id="industry"
+          class="w-full min-h-[70vh] md:min-h-[80vh] p-4 md:p-6 scroll-mt-56 md:scroll-mt-28"
+        >
+          <h2 class="font-bold text-5xl m-5">Real-World Industry Usage</h2>
+          <img src="images/future-world.jpg" alt="global use" />
+          <p class="m-4 leading-normal">
+            Tailwind CSS is widely used in modern web development, especially in
+            projects built with component-based frameworks and modern frontend
+            workflows.
+          </p>
+          <div class="m-4 space-y-6">
+            <article class="rounded border border-slate-200 bg-slate-50 p-4">
+              <h3 class="mb-3 text-2xl font-bold">
+                Common Frameworks and Ecosystems
+              </h3>
+              <p class="mb-3 text-base md:text-lg leading-7">
+                Tailwind CSS is frequently used with:
+              </p>
+              <div
+                class="mb-4 grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-6"
+              >
+                <a
+                  href="https://react.dev"
+                  target="_blank"
+                  rel="noopener"
+                  class="flex flex-col items-center gap-2 rounded border border-slate-200 bg-white p-3 text-center text-sm font-semibold"
+                >
+                  <img
+                    src="images/framework-logo/react-logo.svg"
+                    alt="React logo"
+                    class="h-12 w-12 object-contain"
+                  />
+                  <span>React</span>
+                </a>
+                <a
+                  href="https://nextjs.org"
+                  target="_blank"
+                  rel="noopener"
+                  class="flex flex-col items-center gap-2 rounded border border-slate-200 bg-white p-3 text-center text-sm font-semibold"
+                >
+                  <img
+                    src="images/framework-logo/nextjs-logo.svg"
+                    alt="Next.js logo"
+                    class="h-12 w-12 object-contain"
+                  />
+                  <span>Next.js</span>
+                </a>
+                <a
+                  href="https://vuejs.org"
+                  target="_blank"
+                  rel="noopener"
+                  class="flex flex-col items-center gap-2 rounded border border-slate-200 bg-white p-3 text-center text-sm font-semibold"
+                >
+                  <img
+                    src="images/framework-logo/vue-logo.svg"
+                    alt="Vue logo"
+                    class="h-12 w-12 object-contain"
+                  />
+                  <span>Vue</span>
+                </a>
+                <a
+                  href="https://laravel.com"
+                  target="_blank"
+                  rel="noopener"
+                  class="flex flex-col items-center gap-2 rounded border border-slate-200 bg-white p-3 text-center text-sm font-semibold"
+                >
+                  <img
+                    src="images/framework-logo/laravel-logo.svg"
+                    alt="Laravel logo"
+                    class="h-12 w-12 object-contain"
+                  />
+                  <span>Laravel</span>
+                </a>
+                <a
+                  href="https://svelte.dev"
+                  target="_blank"
+                  rel="noopener"
+                  class="flex flex-col items-center gap-2 rounded border border-slate-200 bg-white p-3 text-center text-sm font-semibold"
+                >
+                  <img
+                    src="images/framework-logo/svelte-logo.svg"
+                    alt="Svelte logo"
+                    class="h-12 w-12 object-contain"
+                  />
+                  <span>Svelte</span>
+                </a>
+                <a
+                  href="https://tailwindui.com"
+                  target="_blank"
+                  rel="noopener"
+                  class="flex flex-col items-center gap-2 rounded border border-slate-200 bg-white p-3 text-center text-sm font-semibold"
+                >
+                  <img
+                    src="images/framework-logo/tailwind-logo.svg"
+                    alt="Tailwind CSS logo"
+                    class="h-12 w-12 object-contain"
+                  />
+                  <span>Tailwind UI</span>
+                </a>
               </div>
-            </div>
-          </article>
-        </div>
-      </section>
-      <section id="industry" class="w-full min-h-[70vh] md:min-h-[80vh] p-4 md:p-6 scroll-mt-56 md:scroll-mt-28">
-        <h2 class="font-bold text-5xl m-5">Real-World Industry Usage</h2>
-        <img src="images/future-world.jpg" alt="global use" />
-        <p class="m-4 leading-normal">
-          Tailwind CSS is widely used in modern web development, especially
-          in projects built with component-based frameworks and modern
-          frontend workflows.
-        </p>
-        <div class="m-4 space-y-6">
-          <article class="rounded border border-slate-200 bg-slate-50 p-4">
-            <h3 class="mb-3 text-2xl font-bold">
-              Common Frameworks and Ecosystems
-            </h3>
-            <p class="mb-3 text-base md:text-lg leading-7">
-              Tailwind CSS is frequently used with:
-            </p>
-            <div class="mb-4 grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-6">
-              <a href="https://react.dev" target="_blank" rel="noopener"
-                class="flex flex-col items-center gap-2 rounded border border-slate-200 bg-white p-3 text-center text-sm font-semibold">
-                <img src="images/framework-logo/react-logo.svg" alt="React logo" class="h-12 w-12 object-contain" />
-                <span>React</span>
-              </a>
-              <a href="https://nextjs.org" target="_blank" rel="noopener"
-                class="flex flex-col items-center gap-2 rounded border border-slate-200 bg-white p-3 text-center text-sm font-semibold">
-                <img src="images/framework-logo/nextjs-logo.svg" alt="Next.js logo" class="h-12 w-12 object-contain" />
-                <span>Next.js</span>
-              </a>
-              <a href="https://vuejs.org" target="_blank" rel="noopener"
-                class="flex flex-col items-center gap-2 rounded border border-slate-200 bg-white p-3 text-center text-sm font-semibold">
-                <img src="images/framework-logo/vue-logo.svg" alt="Vue logo" class="h-12 w-12 object-contain" />
-                <span>Vue</span>
-              </a>
-              <a href="https://laravel.com" target="_blank" rel="noopener"
-                class="flex flex-col items-center gap-2 rounded border border-slate-200 bg-white p-3 text-center text-sm font-semibold">
-                <img src="images/framework-logo/laravel-logo.svg" alt="Laravel logo" class="h-12 w-12 object-contain" />
-                <span>Laravel</span>
-              </a>
-              <a href="https://svelte.dev" target="_blank" rel="noopener"
-                class="flex flex-col items-center gap-2 rounded border border-slate-200 bg-white p-3 text-center text-sm font-semibold">
-                <img src="images/framework-logo/svelte-logo.svg" alt="Svelte logo" class="h-12 w-12 object-contain" />
-                <span>Svelte</span>
-              </a>
-              <a href="https://tailwindui.com" target="_blank" rel="noopener"
-                class="flex flex-col items-center gap-2 rounded border border-slate-200 bg-white p-3 text-center text-sm font-semibold">
-                <img src="images/framework-logo/tailwind-logo.svg" alt="Tailwind CSS logo"
-                  class="h-12 w-12 object-contain" />
-                <span>Tailwind UI</span>
-              </a>
-            </div>
-            <p class="mt-3 text-base md:text-lg leading-7">
-              Its utility-first approach works especially well with reusable
-              UI components and modern frontend architectures.
-            </p>
-          </article>
-          <article class="rounded border border-slate-200 bg-slate-50 p-4">
-            <h3 class="mb-3 text-2xl font-bold">
-              Why Companies Use Tailwind CSS
-            </h3>
-            <p class="mb-3 text-base md:text-lg leading-7">
-              Many development teams choose Tailwind because it helps them:
-            </p>
-            <ul class="list-disc space-y-1 pl-6 text-base md:text-lg leading-7">
-              <li>Build interfaces more quickly</li>
-              <li>Maintain consistent design systems</li>
-              <li>Create responsive layouts more easily</li>
-              <li>Reduce large custom CSS files</li>
-              <li>Improve development workflow in large projects</li>
-            </ul>
-            <p class="mt-3 text-base md:text-lg leading-7">
-              Tailwind is especially popular in startups, SaaS products,
-              dashboards, internal tools, and modern web applications.
-            </p>
-          </article>
-          <article class="rounded border border-slate-200 bg-slate-50 p-4">
-            <h3 class="mb-3 text-2xl font-bold">
-              Enterprise and Industry Adoption
-            </h3>
-            <p class="mb-3 text-base md:text-lg leading-7">
-              Tailwind CSS has been used or supported by many modern
-              technology companies and platforms, including:
-            </p>
-            <div class="mb-4 grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-5">
-              <a href="https://vercel.com" target="_blank" rel="noopener"
-                class="flex flex-col items-center gap-2 rounded border border-slate-200 bg-white p-3 text-center text-sm font-semibold">
-                <img src="images/enterprise-logo/vercel-logo.svg" alt="Vercel logo" class="h-12 w-12 object-contain" />
-                <span>Vercel</span>
-              </a>
-              <a href="https://github.com" target="_blank" rel="noopener"
-                class="flex flex-col items-center gap-2 rounded border border-slate-200 bg-white p-3 text-center text-sm font-semibold">
-                <img src="images/enterprise-logo/github-logo.svg" alt="GitHub logo" class="h-12 w-12 object-contain" />
-                <span>GitHub</span>
-              </a>
-              <a href="https://www.shopify.com" target="_blank" rel="noopener"
-                class="flex flex-col items-center gap-2 rounded border border-slate-200 bg-white p-3 text-center text-sm font-semibold">
-                <img src="images/enterprise-logo/shopify-logo.svg" alt="Shopify logo"
-                  class="h-12 w-12 object-contain" />
-                <span>Shopify</span>
-              </a>
-              <a href="https://openai.com" target="_blank" rel="noopener"
-                class="flex flex-col items-center gap-2 rounded border border-slate-200 bg-white p-3 text-center text-sm font-semibold">
-                <img src="images/enterprise-logo/openai-logo.svg" alt="OpenAI logo" class="h-12 w-12 object-contain" />
-                <span>OpenAI</span>
-              </a>
-              <a href="https://hashnode.com" target="_blank" rel="noopener"
-                class="flex flex-col items-center gap-2 rounded border border-slate-200 bg-white p-3 text-center text-sm font-semibold">
-                <img src="images/enterprise-logo/hashnode-logo.svg" alt="Hashnode logo"
-                  class="h-12 w-12 object-contain" />
-                <span>Hashnode</span>
-              </a>
-            </div>
-            <p class="mt-3 text-base md:text-lg leading-7">
-              Tailwind CSS has become increasingly popular in modern frontend development due to its strong integration
-              with component-based frameworks, scalable design systems, and the growing ecosystem of tools and resources
-              built around it, including Tailwind UI.
-            </p>
-          </article>
-        </div>
-      </section>
-      <section id="future-trends" class="w-full min-h-[70vh] md:min-h-[80vh] p-4 md:p-6 scroll-mt-56 md:scroll-mt-28">
-        <h2 class="font-bold text-5xl m-5">AI and Future Trends</h2>
-        <img src="images/ai-future.jpg" alt="ai future and trends" />
-        <p class="m-4 leading-normal">
-          AI is beginning to change the way developers use Tailwind CSS and
-          build user interfaces. Tools like ChatGPT and GitHub Copilot can
-          generate Tailwind utility classes, components, and layouts instantly,
-          helping developers create interfaces more efficiently.
-        </p>
-        <div class="m-4 grid gap-4 md:grid-cols-2">
-          <article class="rounded border border-slate-200 bg-slate-50 p-4">
-            <h3 class="mb-3 text-2xl font-bold">
-              Faster Prototyping and Iteration
-            </h3>
-            <p class="text-base md:text-lg leading-7">
-              AI tools can quickly generate UI structures, responsive layouts,
-              and styling suggestions. This allows developers to test ideas and
-              iterate on designs much faster than traditional workflows.
-            </p>
-          </article>
-          <article class="rounded border border-slate-200 bg-slate-50 p-4">
-            <h3 class="mb-3 text-2xl font-bold">Smarter Design Systems</h3>
-            <p class="text-base md:text-lg leading-7">
-              As AI tools continue to improve, developers may rely more on
-              AI-assisted design systems that can recommend spacing,
-              typography, colors, and responsive layouts based on project
-              requirements.
-            </p>
-          </article>
-          <article class="rounded border border-slate-200 bg-slate-50 p-4">
-            <h3 class="mb-3 text-2xl font-bold">
-              Improved Developer Productivity
-            </h3>
-            <p class="text-base md:text-lg leading-7">
-              AI can reduce repetitive tasks such as writing utility classes,
-              generating components, and organizing layouts. This allows
-              developers to spend less time on routine implementation and more
-              time on solving higher-level problems.
-            </p>
-          </article>
-          <article class="rounded border border-slate-200 bg-slate-50 p-4">
-            <h3 class="mb-3 text-2xl font-bold">Shifting Developer Focus</h3>
-            <p class="text-base md:text-lg leading-7">
-              As AI becomes better at generating code, developers may spend less
-              time writing styling code and more time focusing on user
-              experience, accessibility, design decisions, and system
-              architecture.
-            </p>
-          </article>
-          <article class="rounded border border-slate-200 bg-slate-50 p-4 md:col-span-full">
-            <h3 class="mb-3 text-2xl font-bold">
-              The Future of Frontend Development
-            </h3>
-            <p class="text-base md:text-lg leading-7">
-              As AI becomes more integrated into development workflows,
-              frontend frameworks and styling systems like Tailwind CSS may
-              continue evolving toward faster development, reusable component
-              systems, and more automated UI generation. Rather than replacing
-              developers, AI is more likely to become a powerful tool that
-              enhances productivity and supports modern frontend development.
-            </p>
-          </article>
-        </div>
-      </section>
-      <section id="learn-more" class="w-full min-h-[70vh] md:min-h-[80vh] p-4 md:p-6 scroll-mt-56 md:scroll-mt-28">
-        <h2 class="font-bold text-5xl m-5">Learn More</h2>
-        <p class="m-4 leading-normal">
-          Interested in learning more about Tailwind CSS? The following
-          resources provide official documentation, installation guides,
-          examples, and best practices.
-        </p>
-        <div class="m-4 grid gap-6 md:grid-cols-3">
-          <article class="rounded border border-slate-200 bg-slate-50 p-4">
-            <h3 class="mb-3 text-2xl font-bold">Official Resources</h3>
-            <ul class="space-y-4 text-base md:text-lg leading-7">
-              <li>
-                <a class="font-semibold text-blue-700 underline" href="https://tailwindcss.com/docs" target="_blank"
-                  rel="noopener">
-                  Official Documentation
+              <p class="mt-3 text-base md:text-lg leading-7">
+                Its utility-first approach works especially well with reusable
+                UI components and modern frontend architectures.
+              </p>
+            </article>
+            <article class="rounded border border-slate-200 bg-slate-50 p-4">
+              <h3 class="mb-3 text-2xl font-bold">
+                Why Companies Use Tailwind CSS
+              </h3>
+              <p class="mb-3 text-base md:text-lg leading-7">
+                Many development teams choose Tailwind because it helps them:
+              </p>
+              <ul
+                class="list-disc space-y-1 pl-6 text-base md:text-lg leading-7"
+              >
+                <li>Build interfaces more quickly</li>
+                <li>Maintain consistent design systems</li>
+                <li>Create responsive layouts more easily</li>
+                <li>Reduce large custom CSS files</li>
+                <li>Improve development workflow in large projects</li>
+              </ul>
+              <p class="mt-3 text-base md:text-lg leading-7">
+                Tailwind is especially popular in startups, SaaS products,
+                dashboards, internal tools, and modern web applications.
+              </p>
+            </article>
+            <article class="rounded border border-slate-200 bg-slate-50 p-4">
+              <h3 class="mb-3 text-2xl font-bold">
+                Enterprise and Industry Adoption
+              </h3>
+              <p class="mb-3 text-base md:text-lg leading-7">
+                Tailwind CSS has been used or supported by many modern
+                technology companies and platforms, including:
+              </p>
+              <div
+                class="mb-4 grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-5"
+              >
+                <a
+                  href="https://vercel.com"
+                  target="_blank"
+                  rel="noopener"
+                  class="flex flex-col items-center gap-2 rounded border border-slate-200 bg-white p-3 text-center text-sm font-semibold"
+                >
+                  <img
+                    src="images/enterprise-logo/vercel-logo.svg"
+                    alt="Vercel logo"
+                    class="h-12 w-12 object-contain"
+                  />
+                  <span>Vercel</span>
                 </a>
-              </li>
-              <li>
-                <a class="font-semibold text-blue-700 underline" href="https://tailwindcss.com/docs/installation"
-                  target="_blank" rel="noopener">
-                  Installation Guide
+                <a
+                  href="https://github.com"
+                  target="_blank"
+                  rel="noopener"
+                  class="flex flex-col items-center gap-2 rounded border border-slate-200 bg-white p-3 text-center text-sm font-semibold"
+                >
+                  <img
+                    src="images/enterprise-logo/github-logo.svg"
+                    alt="GitHub logo"
+                    class="h-12 w-12 object-contain"
+                  />
+                  <span>GitHub</span>
                 </a>
-              </li>
-              <li>
-                <a class="font-semibold text-blue-700 underline" href="https://play.tailwindcss.com" target="_blank"
-                  rel="noopener">
-                  Tailwind CSS Playground
+                <a
+                  href="https://www.shopify.com"
+                  target="_blank"
+                  rel="noopener"
+                  class="flex flex-col items-center gap-2 rounded border border-slate-200 bg-white p-3 text-center text-sm font-semibold"
+                >
+                  <img
+                    src="images/enterprise-logo/shopify-logo.svg"
+                    alt="Shopify logo"
+                    class="h-12 w-12 object-contain"
+                  />
+                  <span>Shopify</span>
                 </a>
-              </li>
-            </ul>
-          </article>
-          <article class="rounded border border-slate-200 bg-slate-50 p-4">
-            <h3 class="mb-3 text-2xl font-bold">Additional Resources</h3>
-            <ul class="space-y-4 text-base md:text-lg leading-7">
-              <li>
-                <a class="font-semibold text-blue-700 underline" href="https://tailwindui.com" target="_blank"
-                  rel="noopener">
-                  Tailwind UI
+                <a
+                  href="https://openai.com"
+                  target="_blank"
+                  rel="noopener"
+                  class="flex flex-col items-center gap-2 rounded border border-slate-200 bg-white p-3 text-center text-sm font-semibold"
+                >
+                  <img
+                    src="images/enterprise-logo/openai-logo.svg"
+                    alt="OpenAI logo"
+                    class="h-12 w-12 object-contain"
+                  />
+                  <span>OpenAI</span>
                 </a>
-                <p>
-                  A collection of professionally designed UI components built
-                  by the Tailwind CSS team.
-                </p>
-              </li>
-              <li>
-                <a class="font-semibold text-blue-700 underline" href="https://headlessui.com" target="_blank"
-                  rel="noopener">
-                  Headless UI
+                <a
+                  href="https://hashnode.com"
+                  target="_blank"
+                  rel="noopener"
+                  class="flex flex-col items-center gap-2 rounded border border-slate-200 bg-white p-3 text-center text-sm font-semibold"
+                >
+                  <img
+                    src="images/enterprise-logo/hashnode-logo.svg"
+                    alt="Hashnode logo"
+                    class="h-12 w-12 object-contain"
+                  />
+                  <span>Hashnode</span>
                 </a>
-                <p>
-                  Unstyled, accessible UI components that work well with
-                  Tailwind CSS.
-                </p>
-              </li>
-            </ul>
-          </article>
-          <article class="rounded border border-slate-200 bg-slate-50 p-4">
-            <h3 class="mb-3 text-2xl font-bold">Community and Learning</h3>
-            <ul class="space-y-4 text-base md:text-lg leading-7">
-              <li>
-                <a class="font-semibold text-blue-700 underline" href="https://tailwindcss.com/blog" target="_blank"
-                  rel="noopener">
-                  Tailwind CSS Blog
-                </a>
-              </li>
-              <li>
-                <a class="font-semibold text-blue-700 underline" href="https://github.com/tailwindlabs/tailwindcss"
-                  target="_blank" rel="noopener">
-                  GitHub Repository
-                </a>
-              </li>
-            </ul>
-          </article>
-        </div>
-        <p class="m-4 leading-normal">
-          These resources are useful for developers who want to explore
-          Tailwind CSS beyond the basics and learn more about real-world
-          development workflows.
-        </p>
-      </section>
-    </main>
-  </div>
-  <footer class="w-full min-h-[10vh] flex items-center text-xl md:text-2xl lg:text-3xl bg-black text-white">
-    <div
-      class="w-full max-w-6xl mx-auto px-4 md:px-6 flex flex-col md:flex-row justify-center items-center gap-3 md:gap-20">
-      <p class="whitespace-nowrap">© 2026 Tailwind CSS Presentation Project</p>
-      <p class="whitespace-nowrap">BCIT Front-End Web Development</p>
-      <p class="whitespace-nowrap">By Johnny, Sandy &amp; Sara</p>
+              </div>
+              <p class="mt-3 text-base md:text-lg leading-7">
+                Tailwind CSS has become increasingly popular in modern frontend
+                development due to its strong integration with component-based
+                frameworks, scalable design systems, and the growing ecosystem
+                of tools and resources built around it, including Tailwind UI.
+              </p>
+            </article>
+          </div>
+        </section>
+        <section
+          id="future-trends"
+          class="w-full min-h-[70vh] md:min-h-[80vh] p-4 md:p-6 scroll-mt-56 md:scroll-mt-28"
+        >
+          <h2 class="font-bold text-5xl m-5">AI and Future Trends</h2>
+          <img src="images/ai-future.jpg" alt="ai future and trends" />
+          <p class="m-4 leading-normal">
+            AI is beginning to change the way developers use Tailwind CSS and
+            build user interfaces. Tools like ChatGPT and GitHub Copilot can
+            generate Tailwind utility classes, components, and layouts
+            instantly, helping developers create interfaces more efficiently.
+          </p>
+          <div class="m-4 grid gap-4 md:grid-cols-2">
+            <article class="rounded border border-slate-200 bg-slate-50 p-4">
+              <h3 class="mb-3 text-2xl font-bold">
+                Faster Prototyping and Iteration
+              </h3>
+              <p class="text-base md:text-lg leading-7">
+                AI tools can quickly generate UI structures, responsive layouts,
+                and styling suggestions. This allows developers to test ideas
+                and iterate on designs much faster than traditional workflows.
+              </p>
+            </article>
+            <article class="rounded border border-slate-200 bg-slate-50 p-4">
+              <h3 class="mb-3 text-2xl font-bold">Smarter Design Systems</h3>
+              <p class="text-base md:text-lg leading-7">
+                As AI tools continue to improve, developers may rely more on
+                AI-assisted design systems that can recommend spacing,
+                typography, colors, and responsive layouts based on project
+                requirements.
+              </p>
+            </article>
+            <article class="rounded border border-slate-200 bg-slate-50 p-4">
+              <h3 class="mb-3 text-2xl font-bold">
+                Improved Developer Productivity
+              </h3>
+              <p class="text-base md:text-lg leading-7">
+                AI can reduce repetitive tasks such as writing utility classes,
+                generating components, and organizing layouts. This allows
+                developers to spend less time on routine implementation and more
+                time on solving higher-level problems.
+              </p>
+            </article>
+            <article class="rounded border border-slate-200 bg-slate-50 p-4">
+              <h3 class="mb-3 text-2xl font-bold">Shifting Developer Focus</h3>
+              <p class="text-base md:text-lg leading-7">
+                As AI becomes better at generating code, developers may spend
+                less time writing styling code and more time focusing on user
+                experience, accessibility, design decisions, and system
+                architecture.
+              </p>
+            </article>
+            <article
+              class="rounded border border-slate-200 bg-slate-50 p-4 md:col-span-full"
+            >
+              <h3 class="mb-3 text-2xl font-bold">
+                The Future of Frontend Development
+              </h3>
+              <p class="text-base md:text-lg leading-7">
+                As AI becomes more integrated into development workflows,
+                frontend frameworks and styling systems like Tailwind CSS may
+                continue evolving toward faster development, reusable component
+                systems, and more automated UI generation. Rather than replacing
+                developers, AI is more likely to become a powerful tool that
+                enhances productivity and supports modern frontend development.
+              </p>
+            </article>
+          </div>
+        </section>
+        <section
+          id="learn-more"
+          class="w-full min-h-[70vh] md:min-h-[80vh] p-4 md:p-6 scroll-mt-56 md:scroll-mt-28"
+        >
+          <h2 class="font-bold text-5xl m-5">Learn More</h2>
+          <p class="m-4 leading-normal">
+            Interested in learning more about Tailwind CSS? The following
+            resources provide official documentation, installation guides,
+            examples, and best practices.
+          </p>
+          <div class="m-4 grid gap-6 md:grid-cols-3">
+            <article class="rounded border border-slate-200 bg-slate-50 p-4">
+              <h3 class="mb-3 text-2xl font-bold">Official Resources</h3>
+              <ul class="space-y-4 text-base md:text-lg leading-7">
+                <li>
+                  <a
+                    class="font-semibold text-blue-700 underline"
+                    href="https://tailwindcss.com/docs"
+                    target="_blank"
+                    rel="noopener"
+                  >
+                    Official Documentation
+                  </a>
+                </li>
+                <li>
+                  <a
+                    class="font-semibold text-blue-700 underline"
+                    href="https://tailwindcss.com/docs/installation"
+                    target="_blank"
+                    rel="noopener"
+                  >
+                    Installation Guide
+                  </a>
+                </li>
+                <li>
+                  <a
+                    class="font-semibold text-blue-700 underline"
+                    href="https://play.tailwindcss.com"
+                    target="_blank"
+                    rel="noopener"
+                  >
+                    Tailwind CSS Playground
+                  </a>
+                </li>
+              </ul>
+            </article>
+            <article class="rounded border border-slate-200 bg-slate-50 p-4">
+              <h3 class="mb-3 text-2xl font-bold">Additional Resources</h3>
+              <ul class="space-y-4 text-base md:text-lg leading-7">
+                <li>
+                  <a
+                    class="font-semibold text-blue-700 underline"
+                    href="https://tailwindui.com"
+                    target="_blank"
+                    rel="noopener"
+                  >
+                    Tailwind UI
+                  </a>
+                  <p>
+                    A collection of professionally designed UI components built
+                    by the Tailwind CSS team.
+                  </p>
+                </li>
+                <li>
+                  <a
+                    class="font-semibold text-blue-700 underline"
+                    href="https://headlessui.com"
+                    target="_blank"
+                    rel="noopener"
+                  >
+                    Headless UI
+                  </a>
+                  <p>
+                    Unstyled, accessible UI components that work well with
+                    Tailwind CSS.
+                  </p>
+                </li>
+              </ul>
+            </article>
+            <article class="rounded border border-slate-200 bg-slate-50 p-4">
+              <h3 class="mb-3 text-2xl font-bold">Community and Learning</h3>
+              <ul class="space-y-4 text-base md:text-lg leading-7">
+                <li>
+                  <a
+                    class="font-semibold text-blue-700 underline"
+                    href="https://tailwindcss.com/blog"
+                    target="_blank"
+                    rel="noopener"
+                  >
+                    Tailwind CSS Blog
+                  </a>
+                </li>
+                <li>
+                  <a
+                    class="font-semibold text-blue-700 underline"
+                    href="https://github.com/tailwindlabs/tailwindcss"
+                    target="_blank"
+                    rel="noopener"
+                  >
+                    GitHub Repository
+                  </a>
+                </li>
+              </ul>
+            </article>
+          </div>
+          <p class="m-4 leading-normal">
+            These resources are useful for developers who want to explore
+            Tailwind CSS beyond the basics and learn more about real-world
+            development workflows.
+          </p>
+        </section>
+      </main>
     </div>
-  </footer>
-</body>
-
+    <footer
+      class="w-full min-h-[10vh] flex items-center text-xl md:text-2xl lg:text-3xl bg-black text-white"
+    >
+      <div
+        class="w-full max-w-6xl mx-auto px-4 md:px-6 flex flex-col md:flex-row justify-center items-center gap-3 md:gap-20"
+      >
+        <p class="whitespace-nowrap">
+          © 2026 Tailwind CSS Presentation Project
+        </p>
+        <p class="whitespace-nowrap">BCIT Front-End Web Development</p>
+        <p class="whitespace-nowrap">By Johnny, Sandy &amp; Sara</p>
+      </div>
+    </footer>
+  </body>
 </html>
