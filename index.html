@@ -18,10 +18,17 @@
 
   <body class="m-0 w-full overflow-x-hidden">
     <nav
-      class="sticky top-0 box-border w-full bg-black text-white text-xl md:text-2xl lg:text-3xl z-10 flex items-center justify-between py-4"
+      class="sticky top-0 box-border w-full bg-black py-4 text-white text-2xl md:text-3xl lg:text-4xl z-10 flex items-center justify-between"
     >
-      <div class="flex w-full items-center justify-between">
-        <a href="https://tailwindcss.com/" target="_blank" rel="noopener">
+      <div
+        class="box-border flex w-full items-center justify-between px-5 xl:w-auto xl:flex-none"
+      >
+        <a
+          href="https://tailwindcss.com/"
+          target="_blank"
+          rel="noopener"
+          class="shrink-0"
+        >
           <picture>
             <source
               media="(min-width: 48em)"
@@ -37,7 +44,8 @@
         </a>
         <button
           id="menu-button"
-          class="block md:hidden text-3xl pr-2 py-3"
+          class="block xl:hidden pr-2 py-3 menu-button"
+          style="font-size: clamp(3.5rem, 12vw, 5rem); line-height: 1"
           aria-label="Open menu"
         >
           &#9776;
@@ -45,7 +53,7 @@
       </div>
       <ul
         id="nav-menu"
-        class="hidden absolute left-0 right-0 top-full bg-black pb-4 md:py-4 md:px-6 md:static md:w-full md:flex flex-col md:flex-row items-center justify-center gap-x-6 gap-y-3 text-center"
+        class="hidden absolute left-0 right-0 top-full bg-black pb-4 xl:static xl:flex xl:flex-1 xl:min-w-0 xl:flex-wrap xl:justify-end xl:py-4 xl:px-6 flex-col xl:flex-row items-center justify-center gap-x-4 xl:gap-x-6 gap-y-3 text-center"
       >
         <li><a href="#about">Tailwind?</a></li>
         <li><a href="#history">History</a></li>
@@ -60,7 +68,8 @@
       </ul>
     </nav>
     <h1
-      class="w-screen px-4 md:px-6 min-h-[20vh] flex items-center justify-center text-5xl md:text-7xl lg:text-9xl font-bold !mt-0 text-center bg-black text-white"
+      class="w-screen px-4 md:px-6 min-h-[20vh] flex items-center justify-center font-bold !mt-0 text-center bg-black text-white"
+      style="font-size: clamp(5rem, 14vw, 12rem); line-height: 1"
       id="top-page"
     >
       Tailwind CSS
@@ -87,7 +96,11 @@
           id="about"
           class="w-full min-h-[70vh] md:min-h-[80vh] p-4 md:p-6 scroll-mt-56 md:scroll-mt-28"
         >
-          <h2 class="font-bold text-5xl m-5">What is Tailwind CSS?</h2>
+          <h2
+            class="mb-4 w-full bg-black p-4 text-center text-5xl font-bold text-white"
+          >
+            What is Tailwind CSS?
+          </h2>
           <p class="m-4 leading-normal">
             Tailwind CSS is a utility-first CSS framework used to build modern
             and responsive user interfaces. Unlike traditional CSS frameworks
@@ -126,7 +139,11 @@
           id="history"
           class="w-full min-h-[70vh] md:min-h-[80vh] p-4 md:p-6 scroll-mt-56 md:scroll-mt-28"
         >
-          <h2 class="font-bold text-5xl m-5">History</h2>
+          <h2
+            class="mb-4 w-full bg-black p-4 text-center text-5xl font-bold text-white"
+          >
+            History
+          </h2>
           <img
             src="images/tired-developer.jpg"
             alt="Developer looking frustrated while working on code"
@@ -196,7 +213,11 @@
           id="why-use"
           class="w-full min-h-[70vh] md:min-h-[80vh] p-4 md:p-6 scroll-mt-56 md:scroll-mt-28"
         >
-          <h2 class="font-bold text-5xl m-5">Why Use Tailwind CSS?</h2>
+          <h2
+            class="mb-4 w-full bg-black p-4 text-center text-5xl font-bold text-white"
+          >
+            Why Use Tailwind CSS?
+          </h2>
           <img src="images/so-what.png" alt="why use it" />
           <p class="m-4 leading-normal">
             As web projects grow larger, traditional CSS can become difficult to
@@ -228,7 +249,11 @@
           id="pros-cons"
           class="w-full min-h-[70vh] md:min-h-[80vh] p-4 md:p-6 scroll-mt-56 md:scroll-mt-28"
         >
-          <h2 class="font-bold text-5xl m-5">Advantages and Disadvantages</h2>
+          <h2
+            class="mb-4 w-full bg-black p-4 text-center text-5xl font-bold text-white"
+          >
+            Advantages and Disadvantages
+          </h2>
           <img src="images/pros-cons.png" alt="Thumbs up and thumbs down" />
           <p class="m-4 leading-normal">
             Like any technology, Tailwind CSS has both strengths and
@@ -334,7 +359,11 @@
           id="how"
           class="w-full min-h-[70vh] md:min-h-[80vh] p-4 md:p-6 scroll-mt-56 md:scroll-mt-28"
         >
-          <h2 class="font-bold text-5xl m-5">How to Use Tailwind CSS</h2>
+          <h2
+            class="mb-4 w-full bg-black p-4 text-center text-5xl font-bold text-white"
+          >
+            How to Use Tailwind CSS
+          </h2>
           <img src="images/user-manual .jpg" alt="user manual" />
           <p class="m-4 leading-normal">
             Tailwind CSS is used by applying utility classes directly to HTML
@@ -569,7 +598,11 @@
           id="versus"
           class="w-full min-h-[70vh] md:min-h-[80vh] p-4 md:p-6 scroll-mt-56 md:scroll-mt-28"
         >
-          <h2 class="font-bold text-5xl m-5">Regular CSS vs Tailwind CSS?</h2>
+          <h2
+            class="mb-4 w-full bg-black p-4 text-center text-5xl font-bold text-white"
+          >
+            Regular CSS vs Tailwind CSS?
+          </h2>
           <img src="images/arm-wrestle.jpg" alt="arm wrestling" />
           <p class="m-4 leading-normal">
             Traditional CSS separates structure and styling into different
@@ -657,7 +690,11 @@
           id="install"
           class="w-full min-h-[70vh] md:min-h-[80vh] p-4 md:p-6 scroll-mt-56 md:scroll-mt-28"
         >
-          <h2 class="font-bold text-5xl m-5">Installation Methods</h2>
+          <h2
+            class="mb-4 w-full bg-black p-4 text-center text-5xl font-bold text-white"
+          >
+            Installation Methods
+          </h2>
           <div class="flex flex-col gap-4 md:flex-row md:items-start">
             <img
               src="images/wifi-install.png"
@@ -751,7 +788,11 @@
           id="industry"
           class="w-full min-h-[70vh] md:min-h-[80vh] p-4 md:p-6 scroll-mt-56 md:scroll-mt-28"
         >
-          <h2 class="font-bold text-5xl m-5">Real-World Industry Usage</h2>
+          <h2
+            class="mb-4 w-full bg-black p-4 text-center text-5xl font-bold text-white"
+          >
+            Real-World Industry Usage
+          </h2>
           <img src="images/future-world.jpg" alt="global use" />
           <p class="m-4 leading-normal">
             Tailwind CSS is widely used in modern web development, especially in
@@ -964,7 +1005,11 @@
           id="future-trends"
           class="w-full min-h-[70vh] md:min-h-[80vh] p-4 md:p-6 scroll-mt-56 md:scroll-mt-28"
         >
-          <h2 class="font-bold text-5xl m-5">AI and Future Trends</h2>
+          <h2
+            class="mb-4 w-full bg-black p-4 text-center text-5xl font-bold text-white"
+          >
+            AI and Future Trends
+          </h2>
           <img src="images/ai-future.jpg" alt="ai future and trends" />
           <p class="m-4 leading-normal">
             AI is beginning to change the way developers use Tailwind CSS and
@@ -1033,7 +1078,11 @@
           id="learn-more"
           class="w-full min-h-[70vh] md:min-h-[80vh] p-4 md:p-6 scroll-mt-56 md:scroll-mt-28"
         >
-          <h2 class="font-bold text-5xl m-5">Learn More</h2>
+          <h2
+            class="mb-4 w-full bg-black p-4 text-center text-5xl font-bold text-white"
+          >
+            Learn More
+          </h2>
           <p class="m-4 leading-normal">
             Interested in learning more about Tailwind CSS? The following
             resources provide official documentation, installation guides,
