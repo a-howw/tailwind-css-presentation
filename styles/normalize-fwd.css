@@ -174,7 +174,8 @@ textarea {
  */
 
 button,
-input { /* 1 */
+input {
+  /* 1 */
   overflow: visible;
 }
 
@@ -184,7 +185,8 @@ input { /* 1 */
  */
 
 button,
-select { /* 1 */
+select {
+  /* 1 */
   text-transform: none;
 }
 
@@ -348,29 +350,26 @@ template {
   display: none;
 }
 
-/* Box Sizing Reset */
-html {
-  box-sizing: border-box;
-}
-
-*, *:before, *:after {
-  box-sizing: inherit;
-}
-
-/* Responsive Media Elements */
+/* FWD styles
+ */
 embed,
 iframe,
 object {
   max-width: 100%;
 }
-
 img,
 video {
   max-width: 100%;
   height: auto;
 }
-
-
+html {
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
 /* Text meant only for screen readers. */
 .screen-reader-text {
   border: 0;
@@ -382,22 +381,24 @@ video {
   position: absolute;
   width: 1px;
   word-wrap: normal !important;
-  word-break: normal !important;
 }
-/* This CSS will bring focusable elements with .screen-reader-text into view when they receive keyboard focus, and is specifically targeted for skip links: */
 
 .screen-reader-text:focus {
-  background-color: #eee;
-  clip-path: none;
-  color: #444;
-  display: block;
-  font-size: 1em;
-  height: auto;
-  left: 5px;
-  line-height: normal;
-  padding: 15px 23px 14px;
-  text-decoration: none;
-  top: 5px;
-  width: auto;
-  z-index: 100000; /* Above WP toolbar. */
+	background-color: #f1f1f1;
+	border-radius: 3px;
+	box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+	clip: auto !important;
+	clip-path: none;
+	color: #21759b;
+	display: block;
+	font-size: 0.875rem;
+	font-weight: 700;
+	height: auto;
+	left: 5px;
+	line-height: normal;
+	padding: 15px 23px 14px;
+	text-decoration: none;
+	top: 5px;
+	width: auto;
+	z-index: 100000;
 }

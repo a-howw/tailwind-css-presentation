@@ -1,0 +1,4 @@
+.tailwind-title {
+  font-size: clamp(4rem, 10vw, 8rem) !important;
+  line-height: 1 !important;
+}
