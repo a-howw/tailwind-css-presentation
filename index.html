@@ -18,10 +18,10 @@
 
   <body class="m-0 w-full overflow-x-hidden">
     <nav
-      class="sticky top-0 box-border w-full bg-black py-4 text-white text-2xl md:text-3xl lg:text-4xl z-10 flex items-center justify-between"
+      class="sticky top-0 box-border w-full bg-black py-4 mb-0 text-white text-2xl md:text-3xl lg:text-4xl z-10 flex items-center justify-between"
     >
       <div
-        class="box-border flex w-full items-center justify-between px-5 xl:w-auto xl:flex-none"
+        class="box-border flex w-full items-center justify-between px-5 2xl:w-auto 2xl:flex-none"
       >
         <a
           href="https://tailwindcss.com/"
@@ -45,7 +45,7 @@
         <button
           id="menu-button"
           type="button"
-          class="block xl:hidden pr-2 py-3 menu-button"
+          class="block 2xl:hidden pr-2 py-3 text-4xl leading-none menu-button"
           aria-label="Open menu"
         >
           &#9776;
@@ -53,7 +53,7 @@
       </div>
       <ul
         id="nav-menu"
-        class="hidden absolute left-0 right-0 top-full bg-black pb-4 xl:static xl:flex xl:flex-1 xl:min-w-0 xl:flex-wrap xl:justify-end xl:py-4 xl:px-6 flex-col xl:flex-row items-center justify-center gap-x-4 xl:gap-x-6 gap-y-3 text-center"
+        class="hidden absolute left-0 right-0 top-full bg-black pb-4 2xl:static 2xl:flex 2xl:flex-1 2xl:min-w-0 2xl:flex-wrap 2xl:justify-end 2xl:py-4 2xl:px-6 flex-col 2xl:flex-row items-center justify-center gap-x-4 2xl:gap-x-6 gap-y-3 text-center"
       >
         <li><a href="#about">Tailwind?</a></li>
         <li><a href="#history">History</a></li>
@@ -67,12 +67,14 @@
         <li><a href="#learn-more">Learn More</a></li>
       </ul>
     </nav>
-    <h1
-      class="w-screen px-4 md:px-6 min-h-[20vh] flex items-center justify-center text-6xl md:text-7xl font-bold !mt-0 text-center bg-black text-white tailwind-title"
-      id="top-page"
-    >
-      Tailwind CSS
-    </h1>
+    <header class="-mt-1 bg-black pt-1">
+      <h1
+        class="block w-full px-4 md:px-6 min-h-[20vh] flex items-center justify-center text-6xl md:text-7xl font-bold m-0 text-center bg-black text-white tailwind-title"
+        id="top-page"
+      >
+        Tailwind CSS
+      </h1>
+    </header>
     <div id="wrapper" class="max-w-6xl mx-auto px-4 md:px-6 bg-white">
       <main
         class="min-h-[70vh] p-3 md:p-5 text-xl md:text-2xl lg:text-3xl space-y-6"

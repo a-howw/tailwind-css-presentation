@@ -1,4 +1,11 @@
 .tailwind-title {
-  font-size: clamp(4rem, 10vw, 8rem) !important;
-  line-height: 1 !important;
+  font-size: clamp(4rem, 10vw, 8rem);
+  line-height: 1;
+}
+
+#menu-button {
+  font-size: 3.5rem;
+  line-height: 1;
+  min-width: 4rem;
+  min-height: 4rem;
 }
